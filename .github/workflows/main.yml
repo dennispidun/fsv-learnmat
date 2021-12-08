@@ -36,7 +36,7 @@ jobs:
         run: npm install --global pm2
 
       - name: Deploy
-        run: git stash && ls -la && pm2 deploy ./ecosystem.config.js production
+        run: git init && git stash && ls -la && pm2 deploy ./ecosystem.config.js production
         env:
           DEPLOY_PM2_HOST: ${{secrets.DEPLOY_PM2_HOST}}
           DEPLOY_PM2_USER: ${{secrets.DEPLOY_PM2_USER}}
