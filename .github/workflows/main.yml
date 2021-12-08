@@ -34,8 +34,8 @@ jobs:
           EOT
       - name: Install PM2
         run: npm install --global pm2
-
       - name: Deploy
+        shell: bash -l {0}
         run: git init && git stash && ls -la && pm2 deploy ./ecosystem.config.js production
         env:
           DEPLOY_PM2_HOST: ${{secrets.DEPLOY_PM2_HOST}}
