@@ -12,15 +12,16 @@ jobs:
           mkdir -p ~/.ssh/
           echo "$SSH_PRIVATE_KEY" > ./deploy.key
           sudo chmod 600 ./deploy.key
+          cp ./deploy.key ~/.ssh/id_rsa
           echo "$SSH_KNOWN_HOSTS" > ~/.ssh/known_hosts
         shell: bash
         env:
           SSH_PRIVATE_KEY: ${{secrets.SSH_PRIVATE_KEY}}
           SSH_KNOWN_HOSTS: ${{secrets.SSH_KNOWN_HOSTS}}
 
-      - name: Create env file
+      - name: Create and copy env file
         run: |
-          cat <<\EOT >target_file
+          ssh root@164.90.191.92 'cd /home/fsv-learnmat && cat <<\EOT >production.json
           {
               "env": "production",
               "secretKey": "${{ secrets.SECRET }}",
@@ -30,8 +31,7 @@ jobs:
               "accPassword": "${{ secrets.ACC_PASSWORD }}", 
               "accHost": "https://sync.academiccloud.de/remote.php/nonshib-webdav",
               "domain": "${{ secrets.DOMAIN }}"
-          }
-          EOT
+          }'
       - name: Install PM2
         run: npm install --global pm2
       - name: Deploy
