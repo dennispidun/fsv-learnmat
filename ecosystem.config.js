@@ -10,7 +10,8 @@ module.exports = {
             watch: false,
             max_memory_restart: '1G',
             env: {
-                NODE_ENV: "production"
+                NODE_ENV: "production",
+                PORT: 8060
             }
         },
     ],
@@ -22,8 +23,7 @@ module.exports = {
             ref: 'origin/main',
             repo: 'https://github.com/dennispidun/fsv-learnmat',
             path: '/home/fsv-learnmat',
-            'post-deploy':
-            'pwd && npm i && nx build learnmat && nx build api && pm2 restart /home/fsv-learnmat/ecosystem.config.js --env production && pm2 save',
+            'post-deploy': 'pwd && rm -rf node_modules/ && npm install && npm install && npm run build && pm2 startOrRestart /home/fsv-learnmat/ecosystem.config.js --env production && pm2 save',
         },
     },
 }
