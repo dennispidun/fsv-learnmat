@@ -23,7 +23,7 @@ module.exports = {
             repo: 'https://github.com/dennispidun/fsv-learnmat',
             path: '/home/fsv-learnmat',
             'post-deploy':
-            'pwd && nx build learnmat && nx build api && pm2 restart /home/fsv-learnmat/ecosystem.config.js --env production && pm2 save',
+            'pwd && npm i && nx build learnmat && nx build api && pm2 restart /home/fsv-learnmat/ecosystem.config.js --env production && pm2 save',
         },
     },
 }
