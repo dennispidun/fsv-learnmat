@@ -2,7 +2,7 @@ module.exports = {
     apps: [
         {
             name: 'fsv-learnmat',
-            script: '/home/fsv-learnmat/dist/main.js',
+            script: '/home/fsv-learnmat/dist/apps/api/main.js',
             time: true,
             instances: 1,
             autorestart: true,
