@@ -33,8 +33,8 @@ class App {
   public listen() {
 
     if (this.env === 'production') {
-      var privateKey  = fs.readFileSync(__dirname + '../../../key.pem', 'utf8');
-      var certificate = fs.readFileSync(__dirname + '../../../cert.pem', 'utf8');
+      var privateKey  = fs.readFileSync(__dirname + '/../../../key.pem', 'utf8');
+      var certificate = fs.readFileSync(__dirname + '/../../../cert.pem', 'utf8');
       var credentials = {key: privateKey, cert: certificate};
       
       var httpsServer = https.createServer(credentials, this.app);
