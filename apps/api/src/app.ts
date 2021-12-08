@@ -11,6 +11,9 @@ import Routes from '@interfaces/routes.interface';
 import errorMiddleware from '@middlewares/error.middleware';
 import { logger, stream } from '@utils/logger';
 import config from 'config';
+import https from 'https';
+import fs from 'fs';
+
 
 class App {
   public app: express.Application;
@@ -28,6 +31,17 @@ class App {
   }
 
   public listen() {
+
+    if (this.env === 'production') {
+      var privateKey  = fs.readFileSync(__dirname + '../../../key.pem', 'utf8');
+      var certificate = fs.readFileSync(__dirname + '../../../cert.pem', 'utf8');
+      var credentials = {key: privateKey, cert: certificate};
+      
+      var httpsServer = https.createServer(credentials, this.app);
+      httpsServer.listen(443);
+      logger.info(`🚀 App listening on the port 443`);
+    }
+
     this.app.listen(this.port, () => {
       logger.info(`=================================`);
       logger.info(`======= ENV: ${this.env} =======`);
