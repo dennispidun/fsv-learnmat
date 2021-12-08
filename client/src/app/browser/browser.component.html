@@ -1,0 +1,30 @@
+<div class="container">
+    <div class="browser">
+        <p>
+            Hier kannst du dir alle Ordner aussuchen für die du Lernmaterial bekommen möchtest.
+            Wir schicken dir anschließend entsprechende Links per Mail, die 7 Tage lang gültig sind. 
+            Bitte lade dir die Dokumente herunter oder beantrage die Links zu einem späteren Zeitpunkt 
+            einfach erneut.
+        </p>
+        <div>
+            <button mat-raised-button color="primary" (click)="getLinks()">
+                Links erhalten
+            </button>
+        </div>
+        
+        <mat-selection-list #modulesList 
+            (selectionChange)="onNgModelChange($event)"
+            color="primary"
+            >
+            <mat-list-option *ngFor="let module of modules" [value]="module.name">
+                {{module.name}}
+            </mat-list-option>
+        </mat-selection-list>
+        
+        <div>
+            <button mat-raised-button color="primary" (click)="getLinks()">
+                Links erhalten
+            </button>
+        </div>
+    </div>
+</div>

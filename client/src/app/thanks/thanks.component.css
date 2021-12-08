@@ -1,0 +1,12 @@
+.container {
+    display: flex;
+    justify-content: center;
+}
+
+.thanks-text {
+    width: 763px;
+}
+
+.thanks-text > * {
+    margin-bottom: 70px;
+}

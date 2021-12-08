@@ -1,0 +1,40 @@
+.container {
+    display: flex;
+    justify-content: center;
+}
+
+.browser {
+    display: flex;
+    flex-flow: column;
+    align-content: flex-start;
+    width: 900px;
+}
+
+button {
+    width: 150px;
+    float: right;
+}
+
+.panel {
+    width: 500px;
+}
+
+@media only screen and (max-width: 490px) {
+
+    button {
+        width: 100%;
+    }
+}
+
+
+.browser > * {
+    margin-bottom: 30px;
+}
+
+.mat-list-option:first-child {
+    border-top: 1px #DADADA solid;
+}
+
+.mat-list-option {
+    border-bottom: 1px #DADADA solid;
+}

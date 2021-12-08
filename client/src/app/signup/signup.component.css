@@ -1,0 +1,28 @@
+.container {
+    display: flex;
+    justify-content: center;
+}
+
+.form {
+    display: flex;
+    flex-flow: column;
+    align-content: flex-start;
+    width: 763px;
+}
+
+.email-field {
+    width: 400px;
+    margin: 40px 0;
+}
+
+@media only screen and (max-width: 600px) {
+
+    .email-field {
+        width: 100%;
+    }
+}
+
+
+.actions > *:first-child {
+    margin-right: 30px;
+}

@@ -1,0 +1,34 @@
+<div class="container">
+    <div class="form">
+        <h1>
+            Anmeldung zum Lernmaterial-Verteiler
+        </h1>
+        <p>
+            Auf dieser Seite kannst du dich mit deiner Uni-Mail für Lernmaterialien der 
+            Fachschaft Informatik anmelden. Du erhälst anschließend eine Mail mit einem 
+            personalisierten Zugang. Wir speichern keinerlei Informationen von dir! Deine
+            E-Mail-Adresse wird lediglich zur Validierung und für den Versand benötigt.
+        </p>
+
+        <form [formGroup]="signupForm" autocomplete="off" novalidate (ngSubmit)="signup(signupForm.value)">
+            <mat-form-field class="email-field">
+                <mat-label>Uni-Mail-Adresse</mat-label>
+                <input type="email" matInput formControlName="email" placeholder="max.mustermann@uni-hildesheim.de" email>
+                <mat-hint>Gib bitte deine E-Mail Adresse der Uni an.</mat-hint>
+                <mat-error *ngIf="hasError('email', 'required')">
+                    Die E-Mail-Adresse <strong>muss</strong> angegeben werden!
+                </mat-error>
+                <mat-error *ngIf="!hasError('email', 'required') && hasError('email', 'pattern') && !hasError('email', 'email')">
+                    Bitte verwende deine Uni-E-Mail-Adresse!
+                </mat-error>
+                <mat-error *ngIf="!hasError('email', 'required') && hasError('email', 'email')">
+                    Bitte gib eine gültige E-Mail-Adresse ein
+                </mat-error>
+            </mat-form-field>
+    
+            <div class="actions">
+                <button mat-raised-button color="primary" [disabled]="!signupForm.valid">Zugang beantragen</button>
+            </div>
+        </form>
+    </div>
+</div>
