@@ -22,6 +22,7 @@ class App {
 
   constructor(routes: Routes[]) {
     this.app = express();
+    if (config.get('trustProxy')) this.app.set('trust proxy', 1);
     this.port = config.get("port") || 3000;
     this.env = config.get("env")  || 'development';
     logger.info(process.env.NODE_ENV)
@@ -32,13 +33,15 @@ class App {
 
   public listen() {
 
-    if (this.env === 'production') {
-      var privateKey  = fs.readFileSync(__dirname + '/../../../key.pem', 'utf8');
-      var certificate = fs.readFileSync(__dirname + '/../../../cert.pem', 'utf8');
-      var credentials = {key: privateKey, cert: certificate};
-      
-      var httpsServer = https.createServer(credentials, this.app);
-      httpsServer.listen(443);
+    const keyPath = __dirname + '/../../../key.pem';
+    const certPath = __dirname + '/../../../cert.pem';
+
+    if (this.env === 'production' && fs.existsSync(keyPath) && fs.existsSync(certPath)) {
+      const credentials = {
+        key: fs.readFileSync(keyPath, 'utf8'),
+        cert: fs.readFileSync(certPath, 'utf8')
+      };
+      https.createServer(credentials, this.app).listen(443);
       logger.info(`🚀 App listening on the port 443`);
     }
 

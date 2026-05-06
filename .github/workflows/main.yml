@@ -1,45 +1,57 @@
+name: Build & Publish Docker Image
+
 on:
   push:
-    branches: [ main ]
+    branches:
+      - main
+    tags:
+      - "v*"
+  pull_request:
+    branches:
+      - main
 
 jobs:
-  deploy:
+  build:
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      packages: write
+
     steps:
-      - uses: actions/checkout@v2
-      - name: Set up SSH
-        run: |
-          mkdir -p ~/.ssh/
-          echo "$SSH_PRIVATE_KEY" > ./deploy.key
-          sudo chmod 600 ./deploy.key
-          cp ./deploy.key ~/.ssh/id_rsa
-          echo "$SSH_KNOWN_HOSTS" > ~/.ssh/known_hosts
-        shell: bash
-        env:
-          SSH_PRIVATE_KEY: ${{secrets.SSH_PRIVATE_KEY}}
-          SSH_KNOWN_HOSTS: ${{secrets.SSH_KNOWN_HOSTS}}
+      - name: Checkout
+        uses: actions/checkout@v4
 
-      - name: Create and copy env file
-        run: |
-          cat <<EOF > production.json
-          {
-              "env": "production",
-              "secretKey": "${{ secrets.SECRET }}",
-              "uniUsername": "${{ secrets.UNI_USERNAME }}",
-              "uniPassword": "${{ secrets.UNI_PASSWORD }}",
-              "accUsername": "${{ secrets.ACC_USERNAME }}",
-              "accPassword": "${{ secrets.ACC_PASSWORD }}", 
-              "accHost": "https://sync.academiccloud.de/remote.php/nonshib-webdav",
-              "domain": "${{ secrets.DOMAIN }}",
-              "port": ${{ secrets.PORT }}
-          }
-          EOF
+      - name: Set lower case repository name
+        run: echo "REPO_LC=${GITHUB_REPOSITORY,,}" >> ${GITHUB_ENV}
 
-          scp production.json ${{secrets.DEPLOY_PM2_USER}}@${{secrets.DEPLOY_PM2_HOST}}:/home/fsv-learnmat
-      - name: Install PM2
-        run: npm install --global pm2
-      - name: Deploy
-        run: git init && git stash && ls -la && pm2 deploy ./ecosystem.config.js production
-        env:
-          DEPLOY_PM2_HOST: ${{secrets.DEPLOY_PM2_HOST}}
-          DEPLOY_PM2_USER: ${{secrets.DEPLOY_PM2_USER}}
+      - name: Log in to GitHub Container Registry
+        if: github.event_name != 'pull_request'
+        uses: docker/login-action@v3
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Extract metadata (tags & labels)
+        id: meta
+        uses: docker/metadata-action@v5
+        with:
+          images: ghcr.io/${{ env.REPO_LC }}
+          tags: |
+            type=raw,value=latest,enable={{is_default_branch}}
+            type=semver,pattern={{version}}
+            type=semver,pattern={{major}}.{{minor}}
+            type=sha,prefix=sha-
+
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v3
+
+      - name: Build and push
+        uses: docker/build-push-action@v6
+        with:
+          context: .
+          push: ${{ github.event_name != 'pull_request' }}
+          tags: ${{ steps.meta.outputs.tags }}
+          labels: ${{ steps.meta.outputs.labels }}
+          cache-from: type=registry,ref=ghcr.io/${{ env.REPO_LC }}:buildcache
+          cache-to: type=registry,ref=ghcr.io/${{ env.REPO_LC }}:buildcache,mode=max

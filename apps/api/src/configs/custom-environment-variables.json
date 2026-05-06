@@ -1,0 +1,19 @@
+{
+    "env": "NODE_ENV",
+    "trustProxy": {
+        "__name": "TRUST_PROXY",
+        "__format": "boolean"
+    },
+    "secretKey": "SECRET_KEY",
+    "uniUsername": "UNI_USERNAME",
+    "uniPassword": "UNI_PASSWORD",
+    "uniMail": "UNI_MAIL",
+    "accUsername": "ACC_USERNAME",
+    "accPassword": "ACC_PASSWORD",
+    "accHost": "ACC_HOST",
+    "domain": "DOMAIN",
+    "port": {
+        "__name": "PORT",
+        "__format": "number"
+    }
+}
