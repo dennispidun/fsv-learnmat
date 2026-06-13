@@ -4,6 +4,7 @@ import nodemailer from "nodemailer";
 class MailService {
 
     public mail(to: string, subject: string, text: string) {
+        try {
         let transporter = nodemailer.createTransport({
             host: "smtp.uni-hildesheim.de",
             port: 465,
@@ -16,12 +17,17 @@ class MailService {
         });
 
         transporter.sendMail({
-            from: '"Informatik Fachschaft 💻" <fs_winf@uni-hildesheim.de>', // sender address
+            from: `"Informatik Fachschaft 💻" <${config.get('uniMail')}>`,
             // bcc: 'fs_winf@uni-hildesheim.de',
             to,
             subject,
             text
         });
+        
+        } catch (e) {
+            console.error("Error while sending mail: " + e);
+        }
+
     }
     
 
