@@ -7,13 +7,15 @@
       "projectType": "application",
       "architect": {
         "build": {
-          "builder": "@nrwl/node:build",
+          "builder": "@nrwl/webpack:webpack",
           "outputs": ["{options.outputPath}"],
           "options": {
             "outputPath": "dist/apps/api",
             "main": "apps/api/src/main.ts",
             "tsConfig": "apps/api/tsconfig.app.json",
-            "assets": ["apps/api/src/configs"]
+            "assets": ["apps/api/src/configs"],
+            "target": "node",
+            "compiler": "tsc"
           },
           "configurations": {
             "production": {
@@ -30,7 +32,7 @@
           }
         },
         "serve": {
-          "builder": "@nrwl/node:execute",
+          "builder": "@nrwl/node:node",
           "options": {
             "buildTarget": "api:build"
           }
@@ -46,7 +48,7 @@
           "builder": "@nrwl/jest:jest",
           "outputs": ["coverage/apps/api"],
           "options": {
-            "jestConfig": "apps/api/jest.config.js",
+            "jestConfig": "apps/api/jest.config.ts",
             "passWithNoTests": true
           }
         }
@@ -68,10 +70,7 @@
             "main": "apps/learnmat/src/main.ts",
             "polyfills": "apps/learnmat/src/polyfills.ts",
             "tsConfig": "apps/learnmat/tsconfig.app.json",
-            "assets": [
-              "apps/learnmat/src/favicon.ico",
-              "apps/learnmat/src/assets"
-            ],
+            "assets": ["apps/learnmat/src/favicon.ico", "apps/learnmat/src/assets"],
             "styles": ["apps/learnmat/src/styles.css"],
             "scripts": []
           },
@@ -119,17 +118,14 @@
         "lint": {
           "builder": "@nrwl/linter:eslint",
           "options": {
-            "lintFilePatterns": [
-              "apps/learnmat/src/**/*.ts",
-              "apps/learnmat/src/**/*.html"
-            ]
+            "lintFilePatterns": ["apps/learnmat/src/**/*.ts", "apps/learnmat/src/**/*.html"]
           }
         },
         "test": {
           "builder": "@nrwl/jest:jest",
           "outputs": ["coverage/apps/learnmat"],
           "options": {
-            "jestConfig": "apps/learnmat/jest.config.js",
+            "jestConfig": "apps/learnmat/jest.config.ts",
             "passWithNoTests": true
           }
         }

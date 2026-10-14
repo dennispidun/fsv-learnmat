@@ -1,4 +1,4 @@
 export interface LearningModule {
-    name: String;
-    etag: String;
+    name: string;
+    etag: string;
 }

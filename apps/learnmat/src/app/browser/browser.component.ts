@@ -14,7 +14,7 @@ import { MatSelectionList } from '@angular/material/list';
 export class BrowserComponent implements OnInit {
 
   modules: LearningModule[] = [];
-  selection: String[] = [];
+  selection: string[] = [];
 
   @ViewChild('modulesList') 
   modulesList?: MatSelectionList;
@@ -51,10 +51,8 @@ export class BrowserComponent implements OnInit {
         duration: 3500
       });
 
-      this.modulesService.getLinks(this.token || "", selectedModules).toPromise().then(success => {
-        
-      })
-      
+      this.modulesService.getLinks(this.token || "", selectedModules).toPromise();
+
     }
 
     

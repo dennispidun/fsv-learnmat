@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { UntypedFormControl, UntypedFormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { AuthService } from '../auth.service';
 import {MatListModule} from '@angular/material/list';
@@ -13,9 +13,9 @@ import {MatInputModule} from '@angular/material/input';
 })
 export class SignupComponent implements OnInit {
 
-  public signupForm: FormGroup = new FormGroup({});
+  public signupForm: UntypedFormGroup = new UntypedFormGroup({});
 
-  email: string = "";
+  email = "";
 
   constructor(private router: Router, private auth: AuthService) {
     
@@ -26,8 +26,8 @@ export class SignupComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.signupForm = new FormGroup({
-      email: new FormControl('', [Validators.required, Validators.email, Validators.pattern(".+@uni-hildesheim\.de")])
+    this.signupForm = new UntypedFormGroup({
+      email: new UntypedFormControl('', [Validators.required, Validators.email, Validators.pattern(".+@uni-hildesheim.de")])
     });
   }
 

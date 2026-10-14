@@ -16,14 +16,12 @@ export class AuthService {
       email
     }, {
       observe: 'response'
-    }).toPromise().then(response => {
-      
-    }).catch(error => {
+    }).toPromise().then(() => undefined).catch(error => {
       throw error;
     });
   }
 
-  public validate(token: String): Observable<HttpResponse<Object>> {
+  public validate(token: string): Observable<HttpResponse<object>> {
     return this.http.post(environment.apiUrl + '/validate', {
       token
     }, {
