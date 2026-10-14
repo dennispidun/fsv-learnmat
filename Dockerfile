@@ -3,10 +3,8 @@ FROM node:18-bullseye-slim AS builder
 WORKDIR /app
 
 COPY package*.json ./
-COPY decorate-angular-cli.js ./
 
 RUN npm install --legacy-peer-deps
-RUN npx ngcc --properties es2015 browser module main --create-ivy-entry-points
 
 COPY . .
 

@@ -60,13 +60,13 @@
       }
     },
     "lint": {
-      "executor": "@nrwl/linter:eslint",
+      "executor": "@nx/linter:eslint",
       "options": {
         "lintFilePatterns": ["apps/learnmat/src/**/*.ts", "apps/learnmat/src/**/*.html"]
       }
     },
     "test": {
-      "executor": "@nrwl/jest:jest",
+      "executor": "@nx/jest:jest",
       "outputs": ["{workspaceRoot}/coverage/apps/learnmat"],
       "options": {
         "jestConfig": "apps/learnmat/jest.config.ts",
