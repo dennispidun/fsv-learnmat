@@ -62,7 +62,7 @@ class MaterialService {
         urls.forEach(link => linksFormatted += link.name + " ~> " + link.url + "\n")
 
         mail.mail(email, "Lernunterlagen Links", 
-            "Hallo,\n\ttu kannst die Lernunterlagen unter folgendem/n Links downloaden: \n\n" + linksFormatted
+            "Hallo,\ndu kannst die Lernunterlagen unter folgendem/n Links downloaden: \n\n" + linksFormatted
             + "\n\nDie Links sind gültig bis: " + expire.toLocaleDateString("de-De") + ", bitte lade die Unterlagen vorher herunter!"
             + "\nSolltest du weitere Unterlagen benötigen, kannst du sie ebenfalls über den Lernmaterial-Verteiler beantragen. "
             + "\n\nViele Grüße,\ndeine Informatik Fachschaft 💻!");
