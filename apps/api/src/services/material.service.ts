@@ -32,15 +32,16 @@ class MaterialService {
         const files = (await client.getDirectoryContents("/altklausuren")) as {filename: string, etag: string}[];
         const filteredFiles = files.filter(file => modules.find(f => ("&quot;"+f.etag+"&quot;") === file.etag) !== undefined).map(file => file.filename);
         
-        let urls: {name: string, url: string}[] = [];
+        const urls: {name: string, url: string}[] = [];
 
+        let expire = new Date();
         for(const file of filteredFiles) {
             const name = "neuertest"
-            var expire = new Date();
-            var numberOfDaysToAdd = 7;
+            expire = new Date();
+            const numberOfDaysToAdd = 7;
             expire.setDate(expire.getDate() + numberOfDaysToAdd); 
 
-            let ownCloudUrl = "https://sync.academiccloud.de/ocs/v1.php/apps/files_sharing/api/v1/shares?format=json&name=" +
+            const ownCloudUrl = "https://sync.academiccloud.de/ocs/v1.php/apps/files_sharing/api/v1/shares?format=json&name=" +
                 + name + "&path=" + encodeURIComponent(file) 
                 + "&shareType=3&expireDate=" + expire.toISOString().slice(0, 10);
             const basicLogin = Buffer.from(config.get("accUsername") + ":" + config.get("accPassword")).toString('base64')
@@ -61,7 +62,7 @@ class MaterialService {
         urls.forEach(link => linksFormatted += link.name + " ~> " + link.url + "\n")
 
         mail.mail(email, "Lernunterlagen Links", 
-            "Hallo,\n\du kannst die Lernunterlagen unter folgendem/n Links downloaden: \n\n" + linksFormatted 
+            "Hallo,\n\ttu kannst die Lernunterlagen unter folgendem/n Links downloaden: \n\n" + linksFormatted
             + "\n\nDie Links sind gültig bis: " + expire.toLocaleDateString("de-De") + ", bitte lade die Unterlagen vorher herunter!"
             + "\nSolltest du weitere Unterlagen benötigen, kannst du sie ebenfalls über den Lernmaterial-Verteiler beantragen. "
             + "\n\nViele Grüße,\ndeine Informatik Fachschaft 💻!");

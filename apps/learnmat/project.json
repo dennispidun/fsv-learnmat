@@ -1,0 +1,78 @@
+{
+  "name": "learnmat",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "application",
+  "sourceRoot": "apps/learnmat/src",
+  "prefix": "app",
+  "targets": {
+    "build": {
+      "executor": "@angular-devkit/build-angular:browser",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/apps/learnmat",
+        "index": "apps/learnmat/src/index.html",
+        "main": "apps/learnmat/src/main.ts",
+        "polyfills": "apps/learnmat/src/polyfills.ts",
+        "tsConfig": "apps/learnmat/tsconfig.app.json",
+        "assets": ["apps/learnmat/src/favicon.ico", "apps/learnmat/src/assets"],
+        "styles": ["apps/learnmat/src/styles.css"],
+        "scripts": []
+      },
+      "configurations": {
+        "production": {
+          "fileReplacements": [
+            {
+              "replace": "apps/learnmat/src/environments/environment.ts",
+              "with": "apps/learnmat/src/environments/environment.prod.ts"
+            }
+          ],
+          "outputHashing": "all",
+          "buildOptimizer": true,
+          "optimization": false
+        },
+        "development": {
+          "buildOptimizer": false,
+          "optimization": false,
+          "vendorChunk": true,
+          "extractLicenses": false,
+          "sourceMap": true,
+          "namedChunks": true
+        }
+      },
+      "defaultConfiguration": "production"
+    },
+    "serve": {
+      "executor": "@angular-devkit/build-angular:dev-server",
+      "configurations": {
+        "production": {
+          "browserTarget": "learnmat:build:production"
+        },
+        "development": {
+          "browserTarget": "learnmat:build:development"
+        }
+      },
+      "defaultConfiguration": "development"
+    },
+    "extract-i18n": {
+      "executor": "@angular-devkit/build-angular:extract-i18n",
+      "options": {
+        "browserTarget": "learnmat:build"
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": ["apps/learnmat/src/**/*.ts", "apps/learnmat/src/**/*.html"]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["{workspaceRoot}/coverage/apps/learnmat"],
+      "options": {
+        "jestConfig": "apps/learnmat/jest.config.ts",
+        "passWithNoTests": true
+      }
+    }
+  },
+  "tags": []
+}
