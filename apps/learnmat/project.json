@@ -45,10 +45,10 @@
       "executor": "@angular-devkit/build-angular:dev-server",
       "configurations": {
         "production": {
-          "browserTarget": "learnmat:build:production"
+          "buildTarget": "learnmat:build:production"
         },
         "development": {
-          "browserTarget": "learnmat:build:development"
+          "buildTarget": "learnmat:build:development"
         }
       },
       "defaultConfiguration": "development"
@@ -56,21 +56,17 @@
     "extract-i18n": {
       "executor": "@angular-devkit/build-angular:extract-i18n",
       "options": {
-        "browserTarget": "learnmat:build"
+        "buildTarget": "learnmat:build"
       }
     },
     "lint": {
-      "executor": "@nx/linter:eslint",
-      "options": {
-        "lintFilePatterns": ["apps/learnmat/src/**/*.ts", "apps/learnmat/src/**/*.html"]
-      }
+      "executor": "@nx/eslint:lint"
     },
     "test": {
       "executor": "@nx/jest:jest",
       "outputs": ["{workspaceRoot}/coverage/apps/learnmat"],
       "options": {
-        "jestConfig": "apps/learnmat/jest.config.ts",
-        "passWithNoTests": true
+        "jestConfig": "apps/learnmat/jest.config.ts"
       }
     }
   },
