@@ -1,4 +1,4 @@
-FROM node:18-bullseye-slim AS builder
+FROM node:22-bullseye-slim AS builder
 
 WORKDIR /app
 
@@ -14,7 +14,7 @@ RUN npx nx build learnmat --configuration=production
 # Copy config files to dist and create empty production.json
 RUN cp -r apps/api/src/configs dist/apps/api/configs && echo '{}' > dist/apps/api/configs/production.json
 
-FROM node:18-bullseye-slim AS production
+FROM node:22-bullseye-slim AS production
 
 WORKDIR /app
 

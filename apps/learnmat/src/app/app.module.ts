@@ -16,38 +16,31 @@ import {MatTableModule} from '@angular/material/table';
 import { SuccessComponent } from './success/success.component';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
 
-import { HttpClientModule } from '@angular/common/http';
+import { provideHttpClient, withInterceptorsFromDi } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule  } from '@angular/forms';
 
-@NgModule({
-  declarations: [
-    AppComponent,
-    SignupComponent,
-    BrowserComponent,
-    ThanksComponent,
-    SuccessComponent
-  ],
-  imports: [
-    BrowserModule,
-    HttpClientModule,
-    AppRoutingModule,
-    MatButtonModule,
-    MatSnackBarModule,
-    MatTableModule,
-    MatListModule,
-    MatInputModule,
-    MatCheckboxModule,
-    BrowserAnimationsModule,
-    MatFormFieldModule,
-    FormsModule,
-    ReactiveFormsModule
-  ],
-  providers: [
-    
-  ],
-  bootstrap: [AppComponent],
-  schemas: [
-    CUSTOM_ELEMENTS_SCHEMA
-  ],
-})
+@NgModule({ declarations: [
+        AppComponent,
+        SignupComponent,
+        BrowserComponent,
+        ThanksComponent,
+        SuccessComponent
+    ],
+    bootstrap: [AppComponent],
+    schemas: [
+        CUSTOM_ELEMENTS_SCHEMA
+    ], imports: [BrowserModule,
+        AppRoutingModule,
+        MatButtonModule,
+        MatSnackBarModule,
+        MatTableModule,
+        MatListModule,
+        MatInputModule,
+        MatCheckboxModule,
+        BrowserAnimationsModule,
+        MatFormFieldModule,
+        FormsModule,
+        ReactiveFormsModule], providers: [
+        provideHttpClient(withInterceptorsFromDi())
+    ] })
 export class AppModule { }
