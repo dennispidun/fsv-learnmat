@@ -7,9 +7,10 @@ import { ModulesService } from '../modules.service';
 import { MatSelectionList } from '@angular/material/list';
 
 @Component({
-  selector: 'app-browser',
-  templateUrl: './browser.component.html',
-  styleUrls: ['./browser.component.css']
+    selector: 'app-browser',
+    templateUrl: './browser.component.html',
+    styleUrls: ['./browser.component.css'],
+    standalone: false
 })
 export class BrowserComponent implements OnInit {
 
