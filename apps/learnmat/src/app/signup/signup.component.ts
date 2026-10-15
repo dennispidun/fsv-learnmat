@@ -2,8 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { UntypedFormControl, UntypedFormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { AuthService } from '../auth.service';
-import {MatLegacyListModule as MatListModule} from '@angular/material/legacy-list';
-import {MatLegacyInputModule as MatInputModule} from '@angular/material/legacy-input';
+import {MatListModule} from '@angular/material/list';
+import {MatInputModule} from '@angular/material/input';
 
 
 @Component({

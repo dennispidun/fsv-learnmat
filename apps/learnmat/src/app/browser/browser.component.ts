@@ -1,10 +1,10 @@
 import { Component, ElementRef, OnInit, ViewChild} from '@angular/core';
 import {  ActivatedRoute } from '@angular/router';
 import { LearningModule } from '../learning-module.model';
-import { MatLegacySnackBar as MatSnackBar } from '@angular/material/legacy-snack-bar';
+import { MatSnackBar } from '@angular/material/snack-bar';
 import { SuccessComponent } from '../success/success.component';
 import { ModulesService } from '../modules.service';
-import { MatLegacySelectionList as MatSelectionList } from '@angular/material/legacy-list';
+import { MatSelectionList } from '@angular/material/list';
 
 @Component({
   selector: 'app-browser',

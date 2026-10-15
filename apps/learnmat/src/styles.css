@@ -58,22 +58,22 @@ body { top: -20px; margin: 0; font-family: 'Roboto', sans-serif; }
 .mat-badge-large .mat-badge-content {
   font-size: 24px; }
 
-.mat-h1, .mat-headline, .mat-typography h1 {
+.mat-h1, .mat-headline-5, .mat-typography h1 {
   font: 400 24px/32px Roboto;
   letter-spacing: 0em;
   margin: 0 0 16px; }
 
-.mat-h2, .mat-title, .mat-typography h2 {
+.mat-h2, .mat-headline-6, .mat-typography h2 {
   font: 500 20px/32px Roboto;
   letter-spacing: 0.0075em;
   margin: 0 0 16px; }
 
-.mat-h3, .mat-subheading-2, .mat-typography h3 {
+.mat-h3, .mat-subtitle-1, .mat-typography h3 {
   font: 400 16px/28px Roboto;
   letter-spacing: 0.0094em;
   margin: 0 0 16px; }
 
-.mat-h4, .mat-subheading-1, .mat-typography h4 {
+.mat-h4, .mat-body-1, .mat-typography h4 {
   font: 500 15px/24px Roboto;
   letter-spacing: 0.0067em;
   margin: 0 0 16px; }
@@ -86,36 +86,36 @@ body { top: -20px; margin: 0; font-family: 'Roboto', sans-serif; }
   font: 400 calc(14px * 0.67)/20px Roboto;
   margin: 0 0 12px; }
 
-.mat-body-strong, .mat-body-2 {
+.mat-body-strong, .mat-subtitle-2 {
   font: 500 14px/24px Roboto;
   letter-spacing: 0.0179em; }
 
-.mat-body, .mat-body-1, .mat-typography {
+.mat-body, .mat-body-2, .mat-typography {
   font: 400 14px/20px Roboto;
   letter-spacing: 0.0179em; }
-  .mat-body p, .mat-body-1 p, .mat-typography p {
+  .mat-body p, .mat-body-2 p, .mat-typography p {
     margin: 0 0 12px; }
 
 .mat-small, .mat-caption {
   font: 400 12px/20px Roboto;
   letter-spacing: 0.0333em; }
 
-.mat-display-4, .mat-typography .mat-display-4 {
+.mat-headline-1, .mat-typography .mat-display-4 {
   font: 300 112px/112px Roboto;
   letter-spacing: -0.0134em;
   margin: 0 0 56px; }
 
-.mat-display-3, .mat-typography .mat-display-3 {
+.mat-headline-2, .mat-typography .mat-display-3 {
   font: 400 56px/56px Roboto;
   letter-spacing: -0.0089em;
   margin: 0 0 64px; }
 
-.mat-display-2, .mat-typography .mat-display-2 {
+.mat-headline-3, .mat-typography .mat-display-2 {
   font: 400 45px/48px Roboto;
   letter-spacing: 0em;
   margin: 0 0 64px; }
 
-.mat-display-1, .mat-typography .mat-display-1 {
+.mat-headline-4, .mat-typography .mat-display-1 {
   font: 400 34px/40px Roboto;
   letter-spacing: 0.0074em;
   margin: 0 0 64px; }
@@ -124,38 +124,38 @@ body { top: -20px; margin: 0; font-family: 'Roboto', sans-serif; }
   font: 400 14px/20px Roboto;
   letter-spacing: 0.0179em; }
 
-.mat-button, .mat-raised-button, .mat-icon-button, .mat-stroked-button,
-.mat-flat-button, .mat-fab, .mat-mini-fab {
+.mat-mdc-button, .mat-mdc-raised-button, .mat-mdc-icon-button, .mat-mdc-outlined-button,
+.mat-mdc-unelevated-button, .mat-mdc-fab, .mat-mdc-mini-fab {
   font-family: Roboto;
   font-size: 14px;
   font-weight: 500; }
 
-.mat-card-title {
+.mat-mdc-card-title {
   font-size: 24px;
   font-weight: 500; }
 
-.mat-card-header .mat-card-title {
+.mat-mdc-card-header .mat-mdc-card-title {
   font-size: 20px; }
 
-.mat-card-subtitle,
-.mat-card-content {
+.mat-mdc-card-subtitle,
+.mat-mdc-card-content {
   font-size: 14px; }
 
 .mat-checkbox-layout .mat-checkbox-label {
   line-height: 24px; }
 
-.mat-chip {
+.mat-mdc-chip {
   font-size: 14px;
   font-weight: 500; }
-  .mat-chip .mat-chip-trailing-icon.mat-icon,
+  .mat-mdc-chip .mat-chip-trailing-icon.mat-icon,
 .mat-chip .mat-chip-remove.mat-icon {
     font-size: 18px; }
 
-.mat-header-cell {
+.mat-mdc-header-cell {
   font-size: 12px;
   font-weight: 500; }
 
-.mat-cell, .mat-footer-cell {
+.mat-mdc-cell, .mat-mdc-footer-cell {
   font-size: 14px; }
 
 .mat-calendar-body {
@@ -170,7 +170,7 @@ body { top: -20px; margin: 0; font-family: 'Roboto', sans-serif; }
   font-size: 11px;
   font-weight: 400; }
 
-.mat-dialog-title {
+.mat-mdc-dialog-title {
   font: 500 20px/32px Roboto;
   letter-spacing: 0.0075em; }
 
@@ -183,7 +183,7 @@ body { top: -20px; margin: 0; font-family: 'Roboto', sans-serif; }
   font: 400 14px/20px Roboto;
   letter-spacing: 0.0179em; }
 
-.mat-form-field {
+.mat-mdc-form-field {
   font-size: inherit;
   font-weight: 400;
   line-height: 1.125;
@@ -198,11 +198,11 @@ body { top: -20px; margin: 0; font-family: 'Roboto', sans-serif; }
   font-size: 150%;
   line-height: 1.125; }
 
-.mat-form-field-prefix .mat-icon-button,
+.mat-form-field-prefix .mat-mdc-icon-button,
 .mat-form-field-suffix .mat-icon-button {
   height: 1.5em;
   width: 1.5em; }
-  .mat-form-field-prefix .mat-icon-button .mat-icon,
+  .mat-form-field-prefix .mat-mdc-icon-button .mat-icon,
 .mat-form-field-suffix .mat-icon-button .mat-icon {
     height: 1.125em;
     line-height: 1.125; }
@@ -329,16 +329,16 @@ body { top: -20px; margin: 0; font-family: 'Roboto', sans-serif; }
 .mat-grid-tile-footer .mat-line:nth-child(n+2) {
       font-size: 12px; }
 
-input.mat-input-element {
+input.mat-mdc-input-element {
   margin-top: -0.0625em; }
 
-.mat-menu-item {
+.mat-mdc-menu-item {
   font-family: Roboto;
   font-size: 14px;
   font-weight: 400; }
 
-.mat-paginator,
-.mat-paginator-page-size .mat-select-trigger {
+.mat-mdc-paginator,
+.mat-mdc-paginator-page-size .mat-select-trigger {
   font-family: Roboto;
   font-size: 12px; }
 
@@ -363,7 +363,7 @@ input.mat-input-element {
   font-size: 14px;
   font-weight: 500; }
 
-.mat-tab-label, .mat-tab-link {
+.mat-tab-label, .mat-mdc-tab-link {
   font-family: Roboto;
   font-size: 14px;
   font-weight: 500; }
@@ -379,7 +379,7 @@ input.mat-input-element {
   letter-spacing: 0.0075em;
   margin: 0; }
 
-.mat-tooltip {
+.mat-mdc-tooltip {
   font-size: 10px;
   padding-top: 6px;
   padding-bottom: 6px; }
@@ -389,71 +389,71 @@ input.mat-input-element {
   padding-top: 8px;
   padding-bottom: 8px; }
 
-.mat-list-base .mat-list-item {
+.mat-mdc-list-base .mat-mdc-list-item {
   font-size: 16px; }
-  .mat-list-base .mat-list-item .mat-line {
+  .mat-mdc-list-base .mat-mdc-list-item .mat-line {
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
     display: block;
     box-sizing: border-box; }
-    .mat-list-base .mat-list-item .mat-line:nth-child(n+2) {
+    .mat-mdc-list-base .mat-mdc-list-item .mat-line:nth-child(n+2) {
       font-size: 14px; }
 
-.mat-list-base .mat-list-option {
+.mat-mdc-list-base .mat-list-option {
   font-size: 16px; }
-  .mat-list-base .mat-list-option .mat-line {
+  .mat-mdc-list-base .mat-list-option .mat-line {
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
     display: block;
     box-sizing: border-box; }
-    .mat-list-base .mat-list-option .mat-line:nth-child(n+2) {
+    .mat-mdc-list-base .mat-list-option .mat-line:nth-child(n+2) {
       font-size: 14px; }
 
-.mat-list-base .mat-subheader {
+.mat-mdc-list-base .mat-mdc-subheader {
   font-family: Roboto;
   font-size: 14px;
   font-weight: 500; }
 
-.mat-list-base[dense] .mat-list-item {
+.mat-mdc-list-base[dense] .mat-mdc-list-item {
   font-size: 12px; }
-  .mat-list-base[dense] .mat-list-item .mat-line {
+  .mat-mdc-list-base[dense] .mat-mdc-list-item .mat-line {
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
     display: block;
     box-sizing: border-box; }
-    .mat-list-base[dense] .mat-list-item .mat-line:nth-child(n+2) {
+    .mat-mdc-list-base[dense] .mat-mdc-list-item .mat-line:nth-child(n+2) {
       font-size: 12px; }
 
-.mat-list-base[dense] .mat-list-option {
+.mat-mdc-list-base[dense] .mat-list-option {
   font-size: 12px; }
-  .mat-list-base[dense] .mat-list-option .mat-line {
+  .mat-mdc-list-base[dense] .mat-list-option .mat-line {
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
     display: block;
     box-sizing: border-box; }
-    .mat-list-base[dense] .mat-list-option .mat-line:nth-child(n+2) {
+    .mat-mdc-list-base[dense] .mat-list-option .mat-line:nth-child(n+2) {
       font-size: 12px; }
 
-.mat-list-base[dense] .mat-subheader {
+.mat-mdc-list-base[dense] .mat-mdc-subheader {
   font-size: 12px;
   font-weight: 500; }
 
-.mat-option {
+.mat-mdc-option {
   font-size: 16px; }
 
-.mat-optgroup-label {
+.mat-mdc-optgroup-label {
   font: 500 14px/24px Roboto;
   letter-spacing: 0.0179em; }
 
-.mat-simple-snackbar {
+.mat-mdc-simple-snack-bar {
   font-family: Roboto;
   font-size: 14px; }
 
-.mat-simple-snackbar-action {
+.mat-mdc-snack-bar-action {
   line-height: 1;
   font-family: inherit;
   font-size: inherit;
@@ -611,31 +611,31 @@ body {
 .mat-ripple-element {
   background-color: rgba(0, 0, 0, 0.1); }
 
-.mat-option {
+.mat-mdc-option {
   color: rgba(0, 0, 0, 0.87); }
-  .mat-option:hover:not(.mat-option-disabled), .mat-option:focus:not(.mat-option-disabled) {
+  .mat-mdc-option:hover:not(.mat-option-disabled), .mat-option:focus:not(.mat-option-disabled) {
     background: rgba(44, 44, 44, 0.04); }
-  .mat-option.mat-selected:not(.mat-option-multiple):not(.mat-option-disabled) {
+  .mat-mdc-option.mat-selected:not(.mat-mdc-option-multiple):not(.mat-option-disabled) {
     background: rgba(44, 44, 44, 0.04); }
-  .mat-option.mat-active {
+  .mat-mdc-option.mat-active {
     background: rgba(44, 44, 44, 0.04);
     color: rgba(0, 0, 0, 0.87); }
-  .mat-option.mat-option-disabled {
+  .mat-mdc-option.mat-option-disabled {
     color: rgba(0, 0, 0, 0.38); }
 
-.mat-primary .mat-option.mat-selected:not(.mat-option-disabled) {
+.mat-primary .mat-mdc-option.mat-selected:not(.mat-option-disabled) {
   color: #7cbb42; }
 
-.mat-accent .mat-option.mat-selected:not(.mat-option-disabled) {
+.mat-accent .mat-mdc-option.mat-selected:not(.mat-option-disabled) {
   color: #76a949; }
 
-.mat-warn .mat-option.mat-selected:not(.mat-option-disabled) {
+.mat-warn .mat-mdc-option.mat-selected:not(.mat-option-disabled) {
   color: #f92121; }
 
-.mat-optgroup-label {
+.mat-mdc-optgroup-label {
   color: rgba(0, 0, 0, 0.54); }
 
-.mat-optgroup-disabled .mat-optgroup-label {
+.mat-optgroup-disabled .mat-mdc-optgroup-label {
   color: rgba(0, 0, 0, 0.38); }
 
 .mat-pseudo-checkbox {
@@ -922,80 +922,80 @@ body {
   background: white;
   color: rgba(0, 0, 0, 0.87); }
 
-.mat-button, .mat-icon-button, .mat-stroked-button {
+.mat-mdc-button, .mat-mdc-icon-button, .mat-mdc-outlined-button {
   color: inherit;
   background: transparent; }
-  .mat-button.mat-primary, .mat-icon-button.mat-primary, .mat-stroked-button.mat-primary {
+  .mat-mdc-button.mat-primary, .mat-mdc-icon-button.mat-primary, .mat-mdc-outlined-button.mat-primary {
     color: #7cbb42; }
-  .mat-button.mat-accent, .mat-icon-button.mat-accent, .mat-stroked-button.mat-accent {
+  .mat-mdc-button.mat-accent, .mat-mdc-icon-button.mat-accent, .mat-mdc-outlined-button.mat-accent {
     color: #76a949; }
-  .mat-button.mat-warn, .mat-icon-button.mat-warn, .mat-stroked-button.mat-warn {
+  .mat-mdc-button.mat-warn, .mat-mdc-icon-button.mat-warn, .mat-mdc-outlined-button.mat-warn {
     color: #f92121; }
-  .mat-button.mat-primary.mat-button-disabled, .mat-button.mat-accent.mat-button-disabled, .mat-button.mat-warn.mat-button-disabled, .mat-button.mat-button-disabled.mat-button-disabled, .mat-icon-button.mat-primary.mat-button-disabled, .mat-icon-button.mat-accent.mat-button-disabled, .mat-icon-button.mat-warn.mat-button-disabled, .mat-icon-button.mat-button-disabled.mat-button-disabled, .mat-stroked-button.mat-primary.mat-button-disabled, .mat-stroked-button.mat-accent.mat-button-disabled, .mat-stroked-button.mat-warn.mat-button-disabled, .mat-stroked-button.mat-button-disabled.mat-button-disabled {
+  .mat-mdc-button.mat-primary.mat-button-disabled, .mat-button.mat-accent.mat-button-disabled, .mat-button.mat-warn.mat-button-disabled, .mat-button.mat-button-disabled.mat-button-disabled, .mat-mdc-icon-button.mat-primary.mat-button-disabled, .mat-icon-button.mat-accent.mat-button-disabled, .mat-icon-button.mat-warn.mat-button-disabled, .mat-icon-button.mat-button-disabled.mat-button-disabled, .mat-mdc-outlined-button.mat-primary.mat-button-disabled, .mat-stroked-button.mat-accent.mat-button-disabled, .mat-stroked-button.mat-warn.mat-button-disabled, .mat-stroked-button.mat-button-disabled.mat-button-disabled {
     color: rgba(0, 0, 0, 0.26); }
-  .mat-button.mat-primary .mat-button-focus-overlay, .mat-icon-button.mat-primary .mat-button-focus-overlay, .mat-stroked-button.mat-primary .mat-button-focus-overlay {
+  .mat-mdc-button.mat-primary .mat-button-focus-overlay, .mat-mdc-icon-button.mat-primary .mat-button-focus-overlay, .mat-mdc-outlined-button.mat-primary .mat-button-focus-overlay {
     background-color: #7cbb42; }
-  .mat-button.mat-accent .mat-button-focus-overlay, .mat-icon-button.mat-accent .mat-button-focus-overlay, .mat-stroked-button.mat-accent .mat-button-focus-overlay {
+  .mat-mdc-button.mat-accent .mat-button-focus-overlay, .mat-mdc-icon-button.mat-accent .mat-button-focus-overlay, .mat-mdc-outlined-button.mat-accent .mat-button-focus-overlay {
     background-color: #76a949; }
-  .mat-button.mat-warn .mat-button-focus-overlay, .mat-icon-button.mat-warn .mat-button-focus-overlay, .mat-stroked-button.mat-warn .mat-button-focus-overlay {
+  .mat-mdc-button.mat-warn .mat-button-focus-overlay, .mat-mdc-icon-button.mat-warn .mat-button-focus-overlay, .mat-mdc-outlined-button.mat-warn .mat-button-focus-overlay {
     background-color: #f92121; }
-  .mat-button.mat-button-disabled .mat-button-focus-overlay, .mat-icon-button.mat-button-disabled .mat-button-focus-overlay, .mat-stroked-button.mat-button-disabled .mat-button-focus-overlay {
+  .mat-mdc-button.mat-button-disabled .mat-button-focus-overlay, .mat-mdc-icon-button.mat-button-disabled .mat-button-focus-overlay, .mat-mdc-outlined-button.mat-button-disabled .mat-button-focus-overlay {
     background-color: transparent; }
-  .mat-button .mat-ripple-element, .mat-icon-button .mat-ripple-element, .mat-stroked-button .mat-ripple-element {
+  .mat-mdc-button .mat-ripple-element, .mat-mdc-icon-button .mat-ripple-element, .mat-mdc-outlined-button .mat-ripple-element {
     opacity: 0.1;
     background-color: currentColor; }
 
 .mat-button-focus-overlay {
   background: black; }
 
-.mat-stroked-button:not(.mat-button-disabled) {
+.mat-mdc-outlined-button:not(.mat-button-disabled) {
   border-color: rgba(0, 0, 0, 0.12); }
 
-.mat-flat-button, .mat-raised-button, .mat-fab, .mat-mini-fab {
+.mat-mdc-unelevated-button, .mat-mdc-raised-button, .mat-mdc-fab, .mat-mdc-mini-fab {
   color: rgba(0, 0, 0, 0.87);
   background-color: white; }
-  .mat-flat-button.mat-primary, .mat-raised-button.mat-primary, .mat-fab.mat-primary, .mat-mini-fab.mat-primary {
+  .mat-mdc-unelevated-button.mat-primary, .mat-mdc-raised-button.mat-primary, .mat-mdc-fab.mat-primary, .mat-mdc-mini-fab.mat-primary {
     color: white; }
-  .mat-flat-button.mat-accent, .mat-raised-button.mat-accent, .mat-fab.mat-accent, .mat-mini-fab.mat-accent {
+  .mat-mdc-unelevated-button.mat-accent, .mat-mdc-raised-button.mat-accent, .mat-mdc-fab.mat-accent, .mat-mdc-mini-fab.mat-accent {
     color: rgba(0, 0, 0, 0.87); }
-  .mat-flat-button.mat-warn, .mat-raised-button.mat-warn, .mat-fab.mat-warn, .mat-mini-fab.mat-warn {
+  .mat-mdc-unelevated-button.mat-warn, .mat-mdc-raised-button.mat-warn, .mat-mdc-fab.mat-warn, .mat-mdc-mini-fab.mat-warn {
     color: white; }
-  .mat-flat-button.mat-primary.mat-button-disabled, .mat-flat-button.mat-accent.mat-button-disabled, .mat-flat-button.mat-warn.mat-button-disabled, .mat-flat-button.mat-button-disabled.mat-button-disabled, .mat-raised-button.mat-primary.mat-button-disabled, .mat-raised-button.mat-accent.mat-button-disabled, .mat-raised-button.mat-warn.mat-button-disabled, .mat-raised-button.mat-button-disabled.mat-button-disabled, .mat-fab.mat-primary.mat-button-disabled, .mat-fab.mat-accent.mat-button-disabled, .mat-fab.mat-warn.mat-button-disabled, .mat-fab.mat-button-disabled.mat-button-disabled, .mat-mini-fab.mat-primary.mat-button-disabled, .mat-mini-fab.mat-accent.mat-button-disabled, .mat-mini-fab.mat-warn.mat-button-disabled, .mat-mini-fab.mat-button-disabled.mat-button-disabled {
+  .mat-mdc-unelevated-button.mat-primary.mat-button-disabled, .mat-flat-button.mat-accent.mat-button-disabled, .mat-flat-button.mat-warn.mat-button-disabled, .mat-flat-button.mat-button-disabled.mat-button-disabled, .mat-mdc-raised-button.mat-primary.mat-button-disabled, .mat-raised-button.mat-accent.mat-button-disabled, .mat-raised-button.mat-warn.mat-button-disabled, .mat-raised-button.mat-button-disabled.mat-button-disabled, .mat-mdc-fab.mat-primary.mat-button-disabled, .mat-fab.mat-accent.mat-button-disabled, .mat-fab.mat-warn.mat-button-disabled, .mat-fab.mat-button-disabled.mat-button-disabled, .mat-mdc-mini-fab.mat-primary.mat-button-disabled, .mat-mini-fab.mat-accent.mat-button-disabled, .mat-mini-fab.mat-warn.mat-button-disabled, .mat-mini-fab.mat-button-disabled.mat-button-disabled {
     color: rgba(0, 0, 0, 0.26); }
-  .mat-flat-button.mat-primary, .mat-raised-button.mat-primary, .mat-fab.mat-primary, .mat-mini-fab.mat-primary {
+  .mat-mdc-unelevated-button.mat-primary, .mat-mdc-raised-button.mat-primary, .mat-mdc-fab.mat-primary, .mat-mdc-mini-fab.mat-primary {
     background-color: #7cbb42; }
-  .mat-flat-button.mat-accent, .mat-raised-button.mat-accent, .mat-fab.mat-accent, .mat-mini-fab.mat-accent {
+  .mat-mdc-unelevated-button.mat-accent, .mat-mdc-raised-button.mat-accent, .mat-mdc-fab.mat-accent, .mat-mdc-mini-fab.mat-accent {
     background-color: #76a949; }
-  .mat-flat-button.mat-warn, .mat-raised-button.mat-warn, .mat-fab.mat-warn, .mat-mini-fab.mat-warn {
+  .mat-mdc-unelevated-button.mat-warn, .mat-mdc-raised-button.mat-warn, .mat-mdc-fab.mat-warn, .mat-mdc-mini-fab.mat-warn {
     background-color: #f92121; }
-  .mat-flat-button.mat-primary.mat-button-disabled, .mat-flat-button.mat-accent.mat-button-disabled, .mat-flat-button.mat-warn.mat-button-disabled, .mat-flat-button.mat-button-disabled.mat-button-disabled, .mat-raised-button.mat-primary.mat-button-disabled, .mat-raised-button.mat-accent.mat-button-disabled, .mat-raised-button.mat-warn.mat-button-disabled, .mat-raised-button.mat-button-disabled.mat-button-disabled, .mat-fab.mat-primary.mat-button-disabled, .mat-fab.mat-accent.mat-button-disabled, .mat-fab.mat-warn.mat-button-disabled, .mat-fab.mat-button-disabled.mat-button-disabled, .mat-mini-fab.mat-primary.mat-button-disabled, .mat-mini-fab.mat-accent.mat-button-disabled, .mat-mini-fab.mat-warn.mat-button-disabled, .mat-mini-fab.mat-button-disabled.mat-button-disabled {
+  .mat-mdc-unelevated-button.mat-primary.mat-button-disabled, .mat-flat-button.mat-accent.mat-button-disabled, .mat-flat-button.mat-warn.mat-button-disabled, .mat-flat-button.mat-button-disabled.mat-button-disabled, .mat-mdc-raised-button.mat-primary.mat-button-disabled, .mat-raised-button.mat-accent.mat-button-disabled, .mat-raised-button.mat-warn.mat-button-disabled, .mat-raised-button.mat-button-disabled.mat-button-disabled, .mat-mdc-fab.mat-primary.mat-button-disabled, .mat-fab.mat-accent.mat-button-disabled, .mat-fab.mat-warn.mat-button-disabled, .mat-fab.mat-button-disabled.mat-button-disabled, .mat-mdc-mini-fab.mat-primary.mat-button-disabled, .mat-mini-fab.mat-accent.mat-button-disabled, .mat-mini-fab.mat-warn.mat-button-disabled, .mat-mini-fab.mat-button-disabled.mat-button-disabled {
     background-color: rgba(44, 44, 44, 0.12); }
-  .mat-flat-button.mat-primary .mat-ripple-element, .mat-raised-button.mat-primary .mat-ripple-element, .mat-fab.mat-primary .mat-ripple-element, .mat-mini-fab.mat-primary .mat-ripple-element {
+  .mat-mdc-unelevated-button.mat-primary .mat-ripple-element, .mat-mdc-raised-button.mat-primary .mat-ripple-element, .mat-mdc-fab.mat-primary .mat-ripple-element, .mat-mdc-mini-fab.mat-primary .mat-ripple-element {
     background-color: rgba(0, 0, 0, 0.1); }
-  .mat-flat-button.mat-accent .mat-ripple-element, .mat-raised-button.mat-accent .mat-ripple-element, .mat-fab.mat-accent .mat-ripple-element, .mat-mini-fab.mat-accent .mat-ripple-element {
+  .mat-mdc-unelevated-button.mat-accent .mat-ripple-element, .mat-mdc-raised-button.mat-accent .mat-ripple-element, .mat-mdc-fab.mat-accent .mat-ripple-element, .mat-mdc-mini-fab.mat-accent .mat-ripple-element {
     background-color: rgba(0, 0, 0, 0.1); }
-  .mat-flat-button.mat-warn .mat-ripple-element, .mat-raised-button.mat-warn .mat-ripple-element, .mat-fab.mat-warn .mat-ripple-element, .mat-mini-fab.mat-warn .mat-ripple-element {
+  .mat-mdc-unelevated-button.mat-warn .mat-ripple-element, .mat-mdc-raised-button.mat-warn .mat-ripple-element, .mat-mdc-fab.mat-warn .mat-ripple-element, .mat-mdc-mini-fab.mat-warn .mat-ripple-element {
     background-color: rgba(255, 255, 255, 0.1); }
 
-.mat-stroked-button:not([class*='mat-elevation-z']), .mat-flat-button:not([class*='mat-elevation-z']) {
+.mat-mdc-outlined-button:not([class*='mat-elevation-z']), .mat-mdc-unelevated-button:not([class*='mat-elevation-z']) {
   box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.2), 0px 0px 0px 0px rgba(0, 0, 0, 0.14), 0px 0px 0px 0px rgba(0, 0, 0, 0.12); }
 
-.mat-raised-button:not([class*='mat-elevation-z']) {
+.mat-mdc-raised-button:not([class*='mat-elevation-z']) {
   box-shadow: 0px 3px 1px -2px rgba(0, 0, 0, 0.2), 0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 1px 5px 0px rgba(0, 0, 0, 0.12); }
 
-.mat-raised-button:not(.mat-button-disabled):active:not([class*='mat-elevation-z']) {
+.mat-mdc-raised-button:not(.mat-button-disabled):active:not([class*='mat-elevation-z']) {
   box-shadow: 0px 5px 5px -3px rgba(0, 0, 0, 0.2), 0px 8px 10px 1px rgba(0, 0, 0, 0.14), 0px 3px 14px 2px rgba(0, 0, 0, 0.12); }
 
-.mat-raised-button.mat-button-disabled:not([class*='mat-elevation-z']) {
+.mat-mdc-raised-button.mat-button-disabled:not([class*='mat-elevation-z']) {
   box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.2), 0px 0px 0px 0px rgba(0, 0, 0, 0.14), 0px 0px 0px 0px rgba(0, 0, 0, 0.12); }
 
-.mat-fab:not([class*='mat-elevation-z']), .mat-mini-fab:not([class*='mat-elevation-z']) {
+.mat-mdc-fab:not([class*='mat-elevation-z']), .mat-mdc-mini-fab:not([class*='mat-elevation-z']) {
   box-shadow: 0px 3px 5px -1px rgba(0, 0, 0, 0.2), 0px 6px 10px 0px rgba(0, 0, 0, 0.14), 0px 1px 18px 0px rgba(0, 0, 0, 0.12); }
 
-.mat-fab:not(.mat-button-disabled):active:not([class*='mat-elevation-z']), .mat-mini-fab:not(.mat-button-disabled):active:not([class*='mat-elevation-z']) {
+.mat-mdc-fab:not(.mat-button-disabled):active:not([class*='mat-elevation-z']), .mat-mdc-mini-fab:not(.mat-button-disabled):active:not([class*='mat-elevation-z']) {
   box-shadow: 0px 7px 8px -4px rgba(0, 0, 0, 0.2), 0px 12px 17px 2px rgba(0, 0, 0, 0.14), 0px 5px 22px 4px rgba(0, 0, 0, 0.12); }
 
-.mat-fab.mat-button-disabled:not([class*='mat-elevation-z']), .mat-mini-fab.mat-button-disabled:not([class*='mat-elevation-z']) {
+.mat-mdc-fab.mat-button-disabled:not([class*='mat-elevation-z']), .mat-mdc-mini-fab.mat-button-disabled:not([class*='mat-elevation-z']) {
   box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.2), 0px 0px 0px 0px rgba(0, 0, 0, 0.14), 0px 0px 0px 0px rgba(0, 0, 0, 0.12); }
 
 .mat-button-toggle-standalone,
@@ -1050,15 +1050,15 @@ body {
 .mat-button-toggle-appearance-standard .mat-button-toggle-label-content {
   line-height: 48px; }
 
-.mat-card {
+.mat-mdc-card {
   background: white;
   color: rgba(0, 0, 0, 0.87); }
-  .mat-card:not([class*='mat-elevation-z']) {
+  .mat-mdc-card:not([class*='mat-elevation-z']) {
     box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12); }
-  .mat-card.mat-card-flat:not([class*='mat-elevation-z']) {
+  .mat-mdc-card.mat-card-flat:not([class*='mat-elevation-z']) {
     box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.2), 0px 0px 0px 0px rgba(0, 0, 0, 0.14), 0px 0px 0px 0px rgba(0, 0, 0, 0.12); }
 
-.mat-card-subtitle {
+.mat-mdc-card-subtitle {
   color: rgba(0, 0, 0, 0.54); }
 
 .mat-checkbox-frame {
@@ -1091,80 +1091,80 @@ body {
 .mat-checkbox-disabled .mat-checkbox-label {
   color: rgba(0, 0, 0, 0.54); }
 
-.mat-checkbox .mat-ripple-element {
+.mat-mdc-checkbox .mat-ripple-element {
   background-color: black; }
 
-.mat-checkbox-checked:not(.mat-checkbox-disabled).mat-primary .mat-ripple-element,
+.mat-mdc-checkbox-checked:not(.mat-checkbox-disabled).mat-primary .mat-ripple-element,
 .mat-checkbox:active:not(.mat-checkbox-disabled).mat-primary .mat-ripple-element {
   background: #7cbb42; }
 
-.mat-checkbox-checked:not(.mat-checkbox-disabled).mat-accent .mat-ripple-element,
+.mat-mdc-checkbox-checked:not(.mat-checkbox-disabled).mat-accent .mat-ripple-element,
 .mat-checkbox:active:not(.mat-checkbox-disabled).mat-accent .mat-ripple-element {
   background: #76a949; }
 
-.mat-checkbox-checked:not(.mat-checkbox-disabled).mat-warn .mat-ripple-element,
+.mat-mdc-checkbox-checked:not(.mat-checkbox-disabled).mat-warn .mat-ripple-element,
 .mat-checkbox:active:not(.mat-checkbox-disabled).mat-warn .mat-ripple-element {
   background: #f92121; }
 
-.mat-chip.mat-standard-chip {
+.mat-mdc-chip.mat-mdc-standard-chip {
   background-color: #e1e1e1;
   color: rgba(0, 0, 0, 0.87); }
-  .mat-chip.mat-standard-chip .mat-chip-remove {
+  .mat-mdc-chip.mat-mdc-standard-chip .mat-chip-remove {
     color: rgba(0, 0, 0, 0.87);
     opacity: 0.4; }
-  .mat-chip.mat-standard-chip:not(.mat-chip-disabled):active {
+  .mat-mdc-chip.mat-mdc-standard-chip:not(.mat-chip-disabled):active {
     box-shadow: 0px 3px 3px -2px rgba(0, 0, 0, 0.2), 0px 3px 4px 0px rgba(0, 0, 0, 0.14), 0px 1px 8px 0px rgba(0, 0, 0, 0.12); }
-  .mat-chip.mat-standard-chip:not(.mat-chip-disabled) .mat-chip-remove:hover {
+  .mat-mdc-chip.mat-mdc-standard-chip:not(.mat-chip-disabled) .mat-chip-remove:hover {
     opacity: 0.54; }
-  .mat-chip.mat-standard-chip.mat-chip-disabled {
+  .mat-mdc-chip.mat-mdc-standard-chip.mat-chip-disabled {
     opacity: 0.4; }
-  .mat-chip.mat-standard-chip::after {
+  .mat-mdc-chip.mat-mdc-standard-chip::after {
     background: black; }
 
-.mat-chip.mat-standard-chip.mat-chip-selected.mat-primary {
+.mat-mdc-chip.mat-mdc-standard-chip.mat-chip-selected.mat-primary {
   background-color: #7cbb42;
   color: rgba(0, 0, 0, 0.87); }
-  .mat-chip.mat-standard-chip.mat-chip-selected.mat-primary .mat-chip-remove {
+  .mat-mdc-chip.mat-mdc-standard-chip.mat-chip-selected.mat-primary .mat-chip-remove {
     color: rgba(0, 0, 0, 0.87);
     opacity: 0.4; }
-  .mat-chip.mat-standard-chip.mat-chip-selected.mat-primary .mat-ripple-element {
+  .mat-mdc-chip.mat-mdc-standard-chip.mat-chip-selected.mat-primary .mat-ripple-element {
     background-color: rgba(0, 0, 0, 0.1); }
 
-.mat-chip.mat-standard-chip.mat-chip-selected.mat-warn {
+.mat-mdc-chip.mat-mdc-standard-chip.mat-chip-selected.mat-warn {
   background-color: #f92121;
   color: white; }
-  .mat-chip.mat-standard-chip.mat-chip-selected.mat-warn .mat-chip-remove {
+  .mat-mdc-chip.mat-mdc-standard-chip.mat-chip-selected.mat-warn .mat-chip-remove {
     color: white;
     opacity: 0.4; }
-  .mat-chip.mat-standard-chip.mat-chip-selected.mat-warn .mat-ripple-element {
+  .mat-mdc-chip.mat-mdc-standard-chip.mat-chip-selected.mat-warn .mat-ripple-element {
     background-color: rgba(255, 255, 255, 0.1); }
 
-.mat-chip.mat-standard-chip.mat-chip-selected.mat-accent {
+.mat-mdc-chip.mat-mdc-standard-chip.mat-chip-selected.mat-accent {
   background-color: #76a949;
   color: rgba(0, 0, 0, 0.87); }
-  .mat-chip.mat-standard-chip.mat-chip-selected.mat-accent .mat-chip-remove {
+  .mat-mdc-chip.mat-mdc-standard-chip.mat-chip-selected.mat-accent .mat-chip-remove {
     color: rgba(0, 0, 0, 0.87);
     opacity: 0.4; }
-  .mat-chip.mat-standard-chip.mat-chip-selected.mat-accent .mat-ripple-element {
+  .mat-mdc-chip.mat-mdc-standard-chip.mat-chip-selected.mat-accent .mat-ripple-element {
     background-color: rgba(0, 0, 0, 0.1); }
 
-.mat-table {
+.mat-mdc-table {
   background: white; }
 
-.mat-table thead, .mat-table tbody, .mat-table tfoot,
+.mat-mdc-table thead, .mat-table tbody, .mat-table tfoot,
 mat-header-row, mat-row, mat-footer-row,
 [mat-header-row], [mat-row], [mat-footer-row],
-.mat-table-sticky {
+.mat-mdc-table-sticky {
   background: inherit; }
 
 mat-row, mat-header-row, mat-footer-row,
-th.mat-header-cell, td.mat-cell, td.mat-footer-cell {
+th.mat-mdc-header-cell, td.mat-mdc-cell, td.mat-mdc-footer-cell {
   border-bottom-color: rgba(0, 0, 0, 0.12); }
 
-.mat-header-cell {
+.mat-mdc-header-cell {
   color: rgba(0, 0, 0, 0.54); }
 
-.mat-cell, .mat-footer-cell {
+.mat-mdc-cell, .mat-mdc-footer-cell {
   color: rgba(0, 0, 0, 0.87); }
 
 .mat-calendar-arrow {
@@ -1316,7 +1316,7 @@ th.mat-header-cell, td.mat-cell, td.mat-footer-cell {
 .mat-date-range-input-inner[disabled] {
   color: rgba(0, 0, 0, 0.38); }
 
-.mat-dialog-container {
+.mat-mdc-dialog-container {
   box-shadow: 0px 11px 15px -7px rgba(0, 0, 0, 0.2), 0px 24px 38px 3px rgba(0, 0, 0, 0.14), 0px 9px 46px 8px rgba(0, 0, 0, 0.12);
   background: white;
   color: rgba(0, 0, 0, 0.87); }
@@ -1365,14 +1365,14 @@ th.mat-header-cell, td.mat-cell, td.mat-footer-cell {
 .mat-form-field-label {
   color: rgba(0, 0, 0, 0.6); }
 
-.mat-hint {
+.mat-mdc-form-field-hint {
   color: rgba(0, 0, 0, 0.6); }
 
-.mat-form-field.mat-focused .mat-form-field-label {
+.mat-mdc-form-field.mat-focused .mat-form-field-label {
   color: #7cbb42; }
-  .mat-form-field.mat-focused .mat-form-field-label.mat-accent {
+  .mat-mdc-form-field.mat-focused .mat-form-field-label.mat-accent {
     color: #76a949; }
-  .mat-form-field.mat-focused .mat-form-field-label.mat-warn {
+  .mat-mdc-form-field.mat-focused .mat-form-field-label.mat-warn {
     color: #f92121; }
 
 .mat-focused .mat-form-field-required-marker {
@@ -1381,11 +1381,11 @@ th.mat-header-cell, td.mat-cell, td.mat-footer-cell {
 .mat-form-field-ripple {
   background-color: rgba(0, 0, 0, 0.87); }
 
-.mat-form-field.mat-focused .mat-form-field-ripple {
+.mat-mdc-form-field.mat-focused .mat-form-field-ripple {
   background-color: #7cbb42; }
-  .mat-form-field.mat-focused .mat-form-field-ripple.mat-accent {
+  .mat-mdc-form-field.mat-focused .mat-form-field-ripple.mat-accent {
     background-color: #76a949; }
-  .mat-form-field.mat-focused .mat-form-field-ripple.mat-warn {
+  .mat-mdc-form-field.mat-focused .mat-form-field-ripple.mat-warn {
     background-color: #f92121; }
 
 .mat-form-field-type-mat-native-select.mat-focused:not(.mat-form-field-invalid) .mat-form-field-infix::after {
@@ -1397,23 +1397,23 @@ th.mat-header-cell, td.mat-cell, td.mat-footer-cell {
 .mat-form-field-type-mat-native-select.mat-focused:not(.mat-form-field-invalid).mat-warn .mat-form-field-infix::after {
   color: #f92121; }
 
-.mat-form-field.mat-form-field-invalid .mat-form-field-label {
+.mat-mdc-form-field.mat-form-field-invalid .mat-form-field-label {
   color: #f92121; }
-  .mat-form-field.mat-form-field-invalid .mat-form-field-label.mat-accent,
+  .mat-mdc-form-field.mat-form-field-invalid .mat-form-field-label.mat-accent,
 .mat-form-field.mat-form-field-invalid .mat-form-field-label .mat-form-field-required-marker {
     color: #f92121; }
 
-.mat-form-field.mat-form-field-invalid .mat-form-field-ripple,
+.mat-mdc-form-field.mat-form-field-invalid .mat-form-field-ripple,
 .mat-form-field.mat-form-field-invalid .mat-form-field-ripple.mat-accent {
   background-color: #f92121; }
 
-.mat-error {
+.mat-mdc-form-field-error {
   color: #f92121; }
 
 .mat-form-field-appearance-legacy .mat-form-field-label {
   color: rgba(0, 0, 0, 0.54); }
 
-.mat-form-field-appearance-legacy .mat-hint {
+.mat-form-field-appearance-legacy .mat-mdc-form-field-hint {
   color: rgba(0, 0, 0, 0.54); }
 
 .mat-form-field-appearance-legacy .mat-form-field-underline {
@@ -1487,41 +1487,41 @@ th.mat-header-cell, td.mat-cell, td.mat-footer-cell {
 .mat-form-field-type-mat-native-select.mat-form-field-disabled .mat-form-field-infix::after {
   color: rgba(0, 0, 0, 0.38); }
 
-.mat-input-element {
+.mat-mdc-input-element {
   caret-color: #7cbb42; }
-  .mat-input-element::placeholder {
+  .mat-mdc-input-element::placeholder {
     color: rgba(0, 0, 0, 0.42); }
-  .mat-input-element::-moz-placeholder {
+  .mat-mdc-input-element::-moz-placeholder {
     color: rgba(0, 0, 0, 0.42); }
-  .mat-input-element::-webkit-input-placeholder {
+  .mat-mdc-input-element::-webkit-input-placeholder {
     color: rgba(0, 0, 0, 0.42); }
-  .mat-input-element:-ms-input-placeholder {
+  .mat-mdc-input-element:-ms-input-placeholder {
     color: rgba(0, 0, 0, 0.42); }
 
-.mat-form-field.mat-accent .mat-input-element {
+.mat-mdc-form-field.mat-accent .mat-mdc-input-element {
   caret-color: #76a949; }
 
-.mat-form-field.mat-warn .mat-input-element,
+.mat-mdc-form-field.mat-warn .mat-mdc-input-element,
 .mat-form-field-invalid .mat-input-element {
   caret-color: #f92121; }
 
 .mat-form-field-type-mat-native-select.mat-form-field-invalid .mat-form-field-infix::after {
   color: #f92121; }
 
-.mat-list-base .mat-list-item {
+.mat-mdc-list-base .mat-mdc-list-item {
   color: rgba(0, 0, 0, 0.87); }
 
-.mat-list-base .mat-list-option {
+.mat-mdc-list-base .mat-list-option {
   color: rgba(0, 0, 0, 0.87); }
 
-.mat-list-base .mat-subheader {
+.mat-mdc-list-base .mat-mdc-subheader {
   color: rgba(0, 0, 0, 0.54); }
 
 .mat-list-item-disabled {
   background-color: #e1e1e1; }
 
 .mat-list-option:hover, .mat-list-option:focus,
-.mat-nav-list .mat-list-item:hover,
+.mat-nav-list .mat-mdc-list-item:hover,
 .mat-nav-list .mat-list-item:focus,
 .mat-action-list .mat-list-item:hover,
 .mat-action-list .mat-list-item:focus {
@@ -1530,33 +1530,33 @@ th.mat-header-cell, td.mat-cell, td.mat-footer-cell {
 .mat-list-single-selected-option, .mat-list-single-selected-option:hover, .mat-list-single-selected-option:focus {
   background: rgba(44, 44, 44, 0.12); }
 
-.mat-menu-panel {
+.mat-mdc-menu-panel {
   background: white; }
-  .mat-menu-panel:not([class*='mat-elevation-z']) {
+  .mat-mdc-menu-panel:not([class*='mat-elevation-z']) {
     box-shadow: 0px 2px 4px -1px rgba(0, 0, 0, 0.2), 0px 4px 5px 0px rgba(0, 0, 0, 0.14), 0px 1px 10px 0px rgba(0, 0, 0, 0.12); }
 
-.mat-menu-item {
+.mat-mdc-menu-item {
   background: transparent;
   color: rgba(0, 0, 0, 0.87); }
-  .mat-menu-item[disabled], .mat-menu-item[disabled]::after,
+  .mat-mdc-menu-item[disabled], .mat-menu-item[disabled]::after,
 .mat-menu-item[disabled] .mat-icon-no-color {
     color: rgba(0, 0, 0, 0.38); }
 
-.mat-menu-item .mat-icon-no-color,
-.mat-menu-item-submenu-trigger::after {
+.mat-mdc-menu-item .mat-icon-no-color,
+.mat-mdc-menu-item-submenu-trigger::after {
   color: rgba(0, 0, 0, 0.54); }
 
-.mat-menu-item:hover:not([disabled]),
+.mat-mdc-menu-item:hover:not([disabled]),
 .mat-menu-item.cdk-program-focused:not([disabled]),
 .mat-menu-item.cdk-keyboard-focused:not([disabled]),
 .mat-menu-item-highlighted:not([disabled]) {
   background: rgba(44, 44, 44, 0.04); }
 
-.mat-paginator {
+.mat-mdc-paginator {
   background: white; }
 
-.mat-paginator,
-.mat-paginator-page-size .mat-select-trigger {
+.mat-mdc-paginator,
+.mat-mdc-paginator-page-size .mat-select-trigger {
   color: rgba(0, 0, 0, 0.54); }
 
 .mat-paginator-decrement,
@@ -1568,13 +1568,13 @@ th.mat-header-cell, td.mat-cell, td.mat-footer-cell {
 .mat-paginator-last {
   border-top: 2px solid rgba(0, 0, 0, 0.54); }
 
-.mat-icon-button[disabled] .mat-paginator-decrement,
+.mat-mdc-icon-button[disabled] .mat-paginator-decrement,
 .mat-icon-button[disabled] .mat-paginator-increment,
 .mat-icon-button[disabled] .mat-paginator-first,
 .mat-icon-button[disabled] .mat-paginator-last {
   border-color: rgba(0, 0, 0, 0.38); }
 
-.mat-paginator-container {
+.mat-mdc-paginator-container {
   min-height: 56px; }
 
 .mat-progress-bar-background {
@@ -1586,69 +1586,69 @@ th.mat-header-cell, td.mat-cell, td.mat-footer-cell {
 .mat-progress-bar-fill::after {
   background-color: #7cbb42; }
 
-.mat-progress-bar.mat-accent .mat-progress-bar-background {
+.mat-mdc-progress-bar.mat-accent .mat-progress-bar-background {
   fill: #d6e5c8; }
 
-.mat-progress-bar.mat-accent .mat-progress-bar-buffer {
+.mat-mdc-progress-bar.mat-accent .mat-progress-bar-buffer {
   background-color: #d6e5c8; }
 
-.mat-progress-bar.mat-accent .mat-progress-bar-fill::after {
+.mat-mdc-progress-bar.mat-accent .mat-progress-bar-fill::after {
   background-color: #76a949; }
 
-.mat-progress-bar.mat-warn .mat-progress-bar-background {
+.mat-mdc-progress-bar.mat-warn .mat-progress-bar-background {
   fill: #fdbcbc; }
 
-.mat-progress-bar.mat-warn .mat-progress-bar-buffer {
+.mat-mdc-progress-bar.mat-warn .mat-progress-bar-buffer {
   background-color: #fdbcbc; }
 
-.mat-progress-bar.mat-warn .mat-progress-bar-fill::after {
+.mat-mdc-progress-bar.mat-warn .mat-progress-bar-fill::after {
   background-color: #f92121; }
 
-.mat-progress-spinner circle, .mat-spinner circle {
+.mat-mdc-progress-spinner circle, .mat-mdc-progress-spinner circle {
   stroke: #7cbb42; }
 
-.mat-progress-spinner.mat-accent circle, .mat-spinner.mat-accent circle {
+.mat-mdc-progress-spinner.mat-accent circle, .mat-mdc-progress-spinner.mat-accent circle {
   stroke: #76a949; }
 
-.mat-progress-spinner.mat-warn circle, .mat-spinner.mat-warn circle {
+.mat-mdc-progress-spinner.mat-warn circle, .mat-mdc-progress-spinner.mat-warn circle {
   stroke: #f92121; }
 
 .mat-radio-outer-circle {
   border-color: rgba(0, 0, 0, 0.54); }
 
-.mat-radio-button.mat-primary.mat-radio-checked .mat-radio-outer-circle {
+.mat-mdc-radio-button.mat-primary.mat-radio-checked .mat-radio-outer-circle {
   border-color: #7cbb42; }
 
-.mat-radio-button.mat-primary .mat-radio-inner-circle,
+.mat-mdc-radio-button.mat-primary .mat-radio-inner-circle,
 .mat-radio-button.mat-primary .mat-radio-ripple .mat-ripple-element:not(.mat-radio-persistent-ripple), .mat-radio-button.mat-primary.mat-radio-checked .mat-radio-persistent-ripple, .mat-radio-button.mat-primary:active .mat-radio-persistent-ripple {
   background-color: #7cbb42; }
 
-.mat-radio-button.mat-accent.mat-radio-checked .mat-radio-outer-circle {
+.mat-mdc-radio-button.mat-accent.mat-radio-checked .mat-radio-outer-circle {
   border-color: #76a949; }
 
-.mat-radio-button.mat-accent .mat-radio-inner-circle,
+.mat-mdc-radio-button.mat-accent .mat-radio-inner-circle,
 .mat-radio-button.mat-accent .mat-radio-ripple .mat-ripple-element:not(.mat-radio-persistent-ripple), .mat-radio-button.mat-accent.mat-radio-checked .mat-radio-persistent-ripple, .mat-radio-button.mat-accent:active .mat-radio-persistent-ripple {
   background-color: #76a949; }
 
-.mat-radio-button.mat-warn.mat-radio-checked .mat-radio-outer-circle {
+.mat-mdc-radio-button.mat-warn.mat-radio-checked .mat-radio-outer-circle {
   border-color: #f92121; }
 
-.mat-radio-button.mat-warn .mat-radio-inner-circle,
+.mat-mdc-radio-button.mat-warn .mat-radio-inner-circle,
 .mat-radio-button.mat-warn .mat-radio-ripple .mat-ripple-element:not(.mat-radio-persistent-ripple), .mat-radio-button.mat-warn.mat-radio-checked .mat-radio-persistent-ripple, .mat-radio-button.mat-warn:active .mat-radio-persistent-ripple {
   background-color: #f92121; }
 
-.mat-radio-button.mat-radio-disabled.mat-radio-checked .mat-radio-outer-circle,
+.mat-mdc-radio-button.mat-radio-disabled.mat-radio-checked .mat-radio-outer-circle,
 .mat-radio-button.mat-radio-disabled .mat-radio-outer-circle {
   border-color: rgba(0, 0, 0, 0.38); }
 
-.mat-radio-button.mat-radio-disabled .mat-radio-ripple .mat-ripple-element,
+.mat-mdc-radio-button.mat-radio-disabled .mat-radio-ripple .mat-ripple-element,
 .mat-radio-button.mat-radio-disabled .mat-radio-inner-circle {
   background-color: rgba(0, 0, 0, 0.38); }
 
-.mat-radio-button.mat-radio-disabled .mat-radio-label-content {
+.mat-mdc-radio-button.mat-radio-disabled .mat-radio-label-content {
   color: rgba(0, 0, 0, 0.38); }
 
-.mat-radio-button .mat-ripple-element {
+.mat-mdc-radio-button .mat-ripple-element {
   background-color: black; }
 
 .mat-select-value {
@@ -1663,26 +1663,26 @@ th.mat-header-cell, td.mat-cell, td.mat-footer-cell {
 .mat-select-arrow {
   color: rgba(0, 0, 0, 0.54); }
 
-.mat-select-panel {
+.mat-mdc-select-panel {
   background: white; }
-  .mat-select-panel:not([class*='mat-elevation-z']) {
+  .mat-mdc-select-panel:not([class*='mat-elevation-z']) {
     box-shadow: 0px 2px 4px -1px rgba(0, 0, 0, 0.2), 0px 4px 5px 0px rgba(0, 0, 0, 0.14), 0px 1px 10px 0px rgba(0, 0, 0, 0.12); }
-  .mat-select-panel .mat-option.mat-selected:not(.mat-option-multiple) {
+  .mat-mdc-select-panel .mat-mdc-option.mat-selected:not(.mat-mdc-option-multiple) {
     background: rgba(44, 44, 44, 0.12); }
 
-.mat-form-field.mat-focused.mat-primary .mat-select-arrow {
+.mat-mdc-form-field.mat-focused.mat-primary .mat-select-arrow {
   color: #7cbb42; }
 
-.mat-form-field.mat-focused.mat-accent .mat-select-arrow {
+.mat-mdc-form-field.mat-focused.mat-accent .mat-select-arrow {
   color: #76a949; }
 
-.mat-form-field.mat-focused.mat-warn .mat-select-arrow {
+.mat-mdc-form-field.mat-focused.mat-warn .mat-select-arrow {
   color: #f92121; }
 
-.mat-form-field .mat-select.mat-select-invalid .mat-select-arrow {
+.mat-mdc-form-field .mat-mdc-select.mat-select-invalid .mat-select-arrow {
   color: #f92121; }
 
-.mat-form-field .mat-select.mat-select-disabled .mat-select-arrow {
+.mat-mdc-form-field .mat-mdc-select.mat-select-disabled .mat-select-arrow {
   color: rgba(0, 0, 0, 0.38); }
 
 .mat-drawer-container {
@@ -1713,34 +1713,34 @@ th.mat-header-cell, td.mat-cell, td.mat-footer-cell {
 .mat-drawer-backdrop.mat-drawer-shown {
   background-color: rgba(0, 0, 0, 0.6); }
 
-.mat-slide-toggle.mat-checked .mat-slide-toggle-thumb {
+.mat-mdc-slide-toggle.mat-checked .mat-slide-toggle-thumb {
   background-color: #76a949; }
 
-.mat-slide-toggle.mat-checked .mat-slide-toggle-bar {
+.mat-mdc-slide-toggle.mat-checked .mat-slide-toggle-bar {
   background-color: rgba(118, 169, 73, 0.54); }
 
-.mat-slide-toggle.mat-checked .mat-ripple-element {
+.mat-mdc-slide-toggle.mat-checked .mat-ripple-element {
   background-color: #76a949; }
 
-.mat-slide-toggle.mat-primary.mat-checked .mat-slide-toggle-thumb {
+.mat-mdc-slide-toggle.mat-primary.mat-checked .mat-slide-toggle-thumb {
   background-color: #7cbb42; }
 
-.mat-slide-toggle.mat-primary.mat-checked .mat-slide-toggle-bar {
+.mat-mdc-slide-toggle.mat-primary.mat-checked .mat-slide-toggle-bar {
   background-color: rgba(124, 187, 66, 0.54); }
 
-.mat-slide-toggle.mat-primary.mat-checked .mat-ripple-element {
+.mat-mdc-slide-toggle.mat-primary.mat-checked .mat-ripple-element {
   background-color: #7cbb42; }
 
-.mat-slide-toggle.mat-warn.mat-checked .mat-slide-toggle-thumb {
+.mat-mdc-slide-toggle.mat-warn.mat-checked .mat-slide-toggle-thumb {
   background-color: #f92121; }
 
-.mat-slide-toggle.mat-warn.mat-checked .mat-slide-toggle-bar {
+.mat-mdc-slide-toggle.mat-warn.mat-checked .mat-slide-toggle-bar {
   background-color: rgba(249, 33, 33, 0.54); }
 
-.mat-slide-toggle.mat-warn.mat-checked .mat-ripple-element {
+.mat-mdc-slide-toggle.mat-warn.mat-checked .mat-ripple-element {
   background-color: #f92121; }
 
-.mat-slide-toggle:not(.mat-checked) .mat-ripple-element {
+.mat-mdc-slide-toggle:not(.mat-checked) .mat-ripple-element {
   background-color: black; }
 
 .mat-slide-toggle-thumb {
@@ -1786,7 +1786,7 @@ th.mat-header-cell, td.mat-cell, td.mat-footer-cell {
 .mat-warn .mat-slider-focus-ring {
   background-color: rgba(249, 33, 33, 0.2); }
 
-.mat-slider:hover .mat-slider-track-background,
+.mat-mdc-slider:hover .mat-slider-track-background,
 .cdk-focused .mat-slider-track-background {
   background-color: rgba(0, 0, 0, 0.38); }
 
@@ -1909,18 +1909,18 @@ th.mat-header-cell, td.mat-cell, td.mat-footer-cell {
 .mat-sort-header-arrow {
   color: #757575; }
 
-.mat-tab-nav-bar,
-.mat-tab-header {
+.mat-mdc-tab-nav-bar,
+.mat-mdc-tab-header {
   border-bottom: 1px solid rgba(0, 0, 0, 0.12); }
 
-.mat-tab-group-inverted-header .mat-tab-nav-bar,
-.mat-tab-group-inverted-header .mat-tab-header {
+.mat-tab-group-inverted-header .mat-mdc-tab-nav-bar,
+.mat-tab-group-inverted-header .mat-mdc-tab-header {
   border-top: 1px solid rgba(0, 0, 0, 0.12);
   border-bottom: none; }
 
-.mat-tab-label, .mat-tab-link {
+.mat-tab-label, .mat-mdc-tab-link {
   color: rgba(0, 0, 0, 0.87); }
-  .mat-tab-label.mat-tab-disabled, .mat-tab-link.mat-tab-disabled {
+  .mat-tab-label.mat-tab-disabled, .mat-mdc-tab-link.mat-tab-disabled {
     color: rgba(0, 0, 0, 0.38); }
 
 .mat-tab-header-pagination-chevron {
@@ -1929,137 +1929,137 @@ th.mat-header-cell, td.mat-cell, td.mat-footer-cell {
 .mat-tab-header-pagination-disabled .mat-tab-header-pagination-chevron {
   border-color: rgba(0, 0, 0, 0.38); }
 
-.mat-tab-group[class*='mat-background-'] .mat-tab-header,
-.mat-tab-nav-bar[class*='mat-background-'] {
+.mat-mdc-tab-group[class*='mat-background-'] .mat-mdc-tab-header,
+.mat-mdc-tab-nav-bar[class*='mat-background-'] {
   border-bottom: none;
   border-top: none; }
 
-.mat-tab-group.mat-primary .mat-tab-label.cdk-keyboard-focused:not(.mat-tab-disabled), .mat-tab-group.mat-primary .mat-tab-label.cdk-program-focused:not(.mat-tab-disabled),
-.mat-tab-group.mat-primary .mat-tab-link.cdk-keyboard-focused:not(.mat-tab-disabled),
-.mat-tab-group.mat-primary .mat-tab-link.cdk-program-focused:not(.mat-tab-disabled), .mat-tab-nav-bar.mat-primary .mat-tab-label.cdk-keyboard-focused:not(.mat-tab-disabled), .mat-tab-nav-bar.mat-primary .mat-tab-label.cdk-program-focused:not(.mat-tab-disabled),
+.mat-mdc-tab-group.mat-primary .mat-tab-label.cdk-keyboard-focused:not(.mat-tab-disabled), .mat-tab-group.mat-primary .mat-tab-label.cdk-program-focused:not(.mat-tab-disabled),
+.mat-tab-group.mat-primary .mat-mdc-tab-link.cdk-keyboard-focused:not(.mat-tab-disabled),
+.mat-tab-group.mat-primary .mat-tab-link.cdk-program-focused:not(.mat-tab-disabled), .mat-mdc-tab-nav-bar.mat-primary .mat-tab-label.cdk-keyboard-focused:not(.mat-tab-disabled), .mat-tab-nav-bar.mat-primary .mat-tab-label.cdk-program-focused:not(.mat-tab-disabled),
 .mat-tab-nav-bar.mat-primary .mat-tab-link.cdk-keyboard-focused:not(.mat-tab-disabled),
 .mat-tab-nav-bar.mat-primary .mat-tab-link.cdk-program-focused:not(.mat-tab-disabled) {
   background-color: rgba(216, 235, 198, 0.3); }
 
-.mat-tab-group.mat-primary .mat-ink-bar, .mat-tab-nav-bar.mat-primary .mat-ink-bar {
+.mat-mdc-tab-group.mat-primary .mat-ink-bar, .mat-mdc-tab-nav-bar.mat-primary .mat-ink-bar {
   background-color: #7cbb42; }
 
-.mat-tab-group.mat-primary.mat-background-primary > .mat-tab-header .mat-ink-bar, .mat-tab-group.mat-primary.mat-background-primary > .mat-tab-link-container .mat-ink-bar, .mat-tab-nav-bar.mat-primary.mat-background-primary > .mat-tab-header .mat-ink-bar, .mat-tab-nav-bar.mat-primary.mat-background-primary > .mat-tab-link-container .mat-ink-bar {
+.mat-mdc-tab-group.mat-primary.mat-background-primary > .mat-mdc-tab-header .mat-ink-bar, .mat-tab-group.mat-primary.mat-background-primary > .mat-tab-link-container .mat-ink-bar, .mat-mdc-tab-nav-bar.mat-primary.mat-background-primary > .mat-tab-header .mat-ink-bar, .mat-tab-nav-bar.mat-primary.mat-background-primary > .mat-tab-link-container .mat-ink-bar {
   background-color: rgba(0, 0, 0, 0.87); }
 
-.mat-tab-group.mat-accent .mat-tab-label.cdk-keyboard-focused:not(.mat-tab-disabled), .mat-tab-group.mat-accent .mat-tab-label.cdk-program-focused:not(.mat-tab-disabled),
-.mat-tab-group.mat-accent .mat-tab-link.cdk-keyboard-focused:not(.mat-tab-disabled),
-.mat-tab-group.mat-accent .mat-tab-link.cdk-program-focused:not(.mat-tab-disabled), .mat-tab-nav-bar.mat-accent .mat-tab-label.cdk-keyboard-focused:not(.mat-tab-disabled), .mat-tab-nav-bar.mat-accent .mat-tab-label.cdk-program-focused:not(.mat-tab-disabled),
+.mat-mdc-tab-group.mat-accent .mat-tab-label.cdk-keyboard-focused:not(.mat-tab-disabled), .mat-tab-group.mat-accent .mat-tab-label.cdk-program-focused:not(.mat-tab-disabled),
+.mat-tab-group.mat-accent .mat-mdc-tab-link.cdk-keyboard-focused:not(.mat-tab-disabled),
+.mat-tab-group.mat-accent .mat-tab-link.cdk-program-focused:not(.mat-tab-disabled), .mat-mdc-tab-nav-bar.mat-accent .mat-tab-label.cdk-keyboard-focused:not(.mat-tab-disabled), .mat-tab-nav-bar.mat-accent .mat-tab-label.cdk-program-focused:not(.mat-tab-disabled),
 .mat-tab-nav-bar.mat-accent .mat-tab-link.cdk-keyboard-focused:not(.mat-tab-disabled),
 .mat-tab-nav-bar.mat-accent .mat-tab-link.cdk-program-focused:not(.mat-tab-disabled) {
   background-color: rgba(214, 229, 200, 0.3); }
 
-.mat-tab-group.mat-accent .mat-ink-bar, .mat-tab-nav-bar.mat-accent .mat-ink-bar {
+.mat-mdc-tab-group.mat-accent .mat-ink-bar, .mat-mdc-tab-nav-bar.mat-accent .mat-ink-bar {
   background-color: #76a949; }
 
-.mat-tab-group.mat-accent.mat-background-accent > .mat-tab-header .mat-ink-bar, .mat-tab-group.mat-accent.mat-background-accent > .mat-tab-link-container .mat-ink-bar, .mat-tab-nav-bar.mat-accent.mat-background-accent > .mat-tab-header .mat-ink-bar, .mat-tab-nav-bar.mat-accent.mat-background-accent > .mat-tab-link-container .mat-ink-bar {
+.mat-mdc-tab-group.mat-accent.mat-background-accent > .mat-mdc-tab-header .mat-ink-bar, .mat-tab-group.mat-accent.mat-background-accent > .mat-tab-link-container .mat-ink-bar, .mat-mdc-tab-nav-bar.mat-accent.mat-background-accent > .mat-tab-header .mat-ink-bar, .mat-tab-nav-bar.mat-accent.mat-background-accent > .mat-tab-link-container .mat-ink-bar {
   background-color: rgba(0, 0, 0, 0.87); }
 
-.mat-tab-group.mat-warn .mat-tab-label.cdk-keyboard-focused:not(.mat-tab-disabled), .mat-tab-group.mat-warn .mat-tab-label.cdk-program-focused:not(.mat-tab-disabled),
-.mat-tab-group.mat-warn .mat-tab-link.cdk-keyboard-focused:not(.mat-tab-disabled),
-.mat-tab-group.mat-warn .mat-tab-link.cdk-program-focused:not(.mat-tab-disabled), .mat-tab-nav-bar.mat-warn .mat-tab-label.cdk-keyboard-focused:not(.mat-tab-disabled), .mat-tab-nav-bar.mat-warn .mat-tab-label.cdk-program-focused:not(.mat-tab-disabled),
+.mat-mdc-tab-group.mat-warn .mat-tab-label.cdk-keyboard-focused:not(.mat-tab-disabled), .mat-tab-group.mat-warn .mat-tab-label.cdk-program-focused:not(.mat-tab-disabled),
+.mat-tab-group.mat-warn .mat-mdc-tab-link.cdk-keyboard-focused:not(.mat-tab-disabled),
+.mat-tab-group.mat-warn .mat-tab-link.cdk-program-focused:not(.mat-tab-disabled), .mat-mdc-tab-nav-bar.mat-warn .mat-tab-label.cdk-keyboard-focused:not(.mat-tab-disabled), .mat-tab-nav-bar.mat-warn .mat-tab-label.cdk-program-focused:not(.mat-tab-disabled),
 .mat-tab-nav-bar.mat-warn .mat-tab-link.cdk-keyboard-focused:not(.mat-tab-disabled),
 .mat-tab-nav-bar.mat-warn .mat-tab-link.cdk-program-focused:not(.mat-tab-disabled) {
   background-color: rgba(253, 188, 188, 0.3); }
 
-.mat-tab-group.mat-warn .mat-ink-bar, .mat-tab-nav-bar.mat-warn .mat-ink-bar {
+.mat-mdc-tab-group.mat-warn .mat-ink-bar, .mat-mdc-tab-nav-bar.mat-warn .mat-ink-bar {
   background-color: #f92121; }
 
-.mat-tab-group.mat-warn.mat-background-warn > .mat-tab-header .mat-ink-bar, .mat-tab-group.mat-warn.mat-background-warn > .mat-tab-link-container .mat-ink-bar, .mat-tab-nav-bar.mat-warn.mat-background-warn > .mat-tab-header .mat-ink-bar, .mat-tab-nav-bar.mat-warn.mat-background-warn > .mat-tab-link-container .mat-ink-bar {
+.mat-mdc-tab-group.mat-warn.mat-background-warn > .mat-mdc-tab-header .mat-ink-bar, .mat-tab-group.mat-warn.mat-background-warn > .mat-tab-link-container .mat-ink-bar, .mat-mdc-tab-nav-bar.mat-warn.mat-background-warn > .mat-tab-header .mat-ink-bar, .mat-tab-nav-bar.mat-warn.mat-background-warn > .mat-tab-link-container .mat-ink-bar {
   background-color: white; }
 
-.mat-tab-group.mat-background-primary .mat-tab-label.cdk-keyboard-focused:not(.mat-tab-disabled), .mat-tab-group.mat-background-primary .mat-tab-label.cdk-program-focused:not(.mat-tab-disabled),
-.mat-tab-group.mat-background-primary .mat-tab-link.cdk-keyboard-focused:not(.mat-tab-disabled),
-.mat-tab-group.mat-background-primary .mat-tab-link.cdk-program-focused:not(.mat-tab-disabled), .mat-tab-nav-bar.mat-background-primary .mat-tab-label.cdk-keyboard-focused:not(.mat-tab-disabled), .mat-tab-nav-bar.mat-background-primary .mat-tab-label.cdk-program-focused:not(.mat-tab-disabled),
+.mat-mdc-tab-group.mat-background-primary .mat-tab-label.cdk-keyboard-focused:not(.mat-tab-disabled), .mat-tab-group.mat-background-primary .mat-tab-label.cdk-program-focused:not(.mat-tab-disabled),
+.mat-tab-group.mat-background-primary .mat-mdc-tab-link.cdk-keyboard-focused:not(.mat-tab-disabled),
+.mat-tab-group.mat-background-primary .mat-tab-link.cdk-program-focused:not(.mat-tab-disabled), .mat-mdc-tab-nav-bar.mat-background-primary .mat-tab-label.cdk-keyboard-focused:not(.mat-tab-disabled), .mat-tab-nav-bar.mat-background-primary .mat-tab-label.cdk-program-focused:not(.mat-tab-disabled),
 .mat-tab-nav-bar.mat-background-primary .mat-tab-link.cdk-keyboard-focused:not(.mat-tab-disabled),
 .mat-tab-nav-bar.mat-background-primary .mat-tab-link.cdk-program-focused:not(.mat-tab-disabled) {
   background-color: rgba(216, 235, 198, 0.3); }
 
-.mat-tab-group.mat-background-primary > .mat-tab-header, .mat-tab-group.mat-background-primary > .mat-tab-link-container, .mat-tab-group.mat-background-primary > .mat-tab-header-pagination, .mat-tab-nav-bar.mat-background-primary > .mat-tab-header, .mat-tab-nav-bar.mat-background-primary > .mat-tab-link-container, .mat-tab-nav-bar.mat-background-primary > .mat-tab-header-pagination {
+.mat-mdc-tab-group.mat-background-primary > .mat-mdc-tab-header, .mat-tab-group.mat-background-primary > .mat-tab-link-container, .mat-tab-group.mat-background-primary > .mat-tab-header-pagination, .mat-mdc-tab-nav-bar.mat-background-primary > .mat-tab-header, .mat-tab-nav-bar.mat-background-primary > .mat-tab-link-container, .mat-tab-nav-bar.mat-background-primary > .mat-tab-header-pagination {
   background-color: #7cbb42; }
 
-.mat-tab-group.mat-background-primary > .mat-tab-header .mat-tab-label, .mat-tab-group.mat-background-primary > .mat-tab-link-container .mat-tab-link, .mat-tab-nav-bar.mat-background-primary > .mat-tab-header .mat-tab-label, .mat-tab-nav-bar.mat-background-primary > .mat-tab-link-container .mat-tab-link {
+.mat-mdc-tab-group.mat-background-primary > .mat-mdc-tab-header .mat-tab-label, .mat-tab-group.mat-background-primary > .mat-mdc-tab-link-container .mat-tab-link, .mat-mdc-tab-nav-bar.mat-background-primary > .mat-tab-header .mat-tab-label, .mat-tab-nav-bar.mat-background-primary > .mat-tab-link-container .mat-tab-link {
   color: rgba(0, 0, 0, 0.87); }
-  .mat-tab-group.mat-background-primary > .mat-tab-header .mat-tab-label.mat-tab-disabled, .mat-tab-group.mat-background-primary > .mat-tab-link-container .mat-tab-link.mat-tab-disabled, .mat-tab-nav-bar.mat-background-primary > .mat-tab-header .mat-tab-label.mat-tab-disabled, .mat-tab-nav-bar.mat-background-primary > .mat-tab-link-container .mat-tab-link.mat-tab-disabled {
+  .mat-mdc-tab-group.mat-background-primary > .mat-mdc-tab-header .mat-tab-label.mat-tab-disabled, .mat-tab-group.mat-background-primary > .mat-mdc-tab-link-container .mat-tab-link.mat-tab-disabled, .mat-mdc-tab-nav-bar.mat-background-primary > .mat-tab-header .mat-tab-label.mat-tab-disabled, .mat-tab-nav-bar.mat-background-primary > .mat-tab-link-container .mat-tab-link.mat-tab-disabled {
     color: rgba(0, 0, 0, 0.4); }
 
-.mat-tab-group.mat-background-primary > .mat-tab-header-pagination .mat-tab-header-pagination-chevron,
-.mat-tab-group.mat-background-primary > .mat-tab-links .mat-focus-indicator::before,
-.mat-tab-group.mat-background-primary > .mat-tab-header .mat-focus-indicator::before, .mat-tab-nav-bar.mat-background-primary > .mat-tab-header-pagination .mat-tab-header-pagination-chevron,
+.mat-mdc-tab-group.mat-background-primary > .mat-mdc-tab-header-pagination .mat-tab-header-pagination-chevron,
+.mat-tab-group.mat-background-primary > .mat-mdc-tab-links .mat-focus-indicator::before,
+.mat-tab-group.mat-background-primary > .mat-tab-header .mat-focus-indicator::before, .mat-mdc-tab-nav-bar.mat-background-primary > .mat-tab-header-pagination .mat-tab-header-pagination-chevron,
 .mat-tab-nav-bar.mat-background-primary > .mat-tab-links .mat-focus-indicator::before,
 .mat-tab-nav-bar.mat-background-primary > .mat-tab-header .mat-focus-indicator::before {
   border-color: rgba(0, 0, 0, 0.87); }
 
-.mat-tab-group.mat-background-primary > .mat-tab-header-pagination-disabled .mat-tab-header-pagination-chevron, .mat-tab-nav-bar.mat-background-primary > .mat-tab-header-pagination-disabled .mat-tab-header-pagination-chevron {
+.mat-mdc-tab-group.mat-background-primary > .mat-tab-header-pagination-disabled .mat-tab-header-pagination-chevron, .mat-mdc-tab-nav-bar.mat-background-primary > .mat-tab-header-pagination-disabled .mat-tab-header-pagination-chevron {
   border-color: rgba(0, 0, 0, 0.4); }
 
-.mat-tab-group.mat-background-primary > .mat-tab-header .mat-ripple-element,
-.mat-tab-group.mat-background-primary > .mat-tab-link-container .mat-ripple-element, .mat-tab-nav-bar.mat-background-primary > .mat-tab-header .mat-ripple-element,
+.mat-mdc-tab-group.mat-background-primary > .mat-mdc-tab-header .mat-ripple-element,
+.mat-tab-group.mat-background-primary > .mat-tab-link-container .mat-ripple-element, .mat-mdc-tab-nav-bar.mat-background-primary > .mat-tab-header .mat-ripple-element,
 .mat-tab-nav-bar.mat-background-primary > .mat-tab-link-container .mat-ripple-element {
   background-color: rgba(0, 0, 0, 0.12); }
 
-.mat-tab-group.mat-background-accent .mat-tab-label.cdk-keyboard-focused:not(.mat-tab-disabled), .mat-tab-group.mat-background-accent .mat-tab-label.cdk-program-focused:not(.mat-tab-disabled),
-.mat-tab-group.mat-background-accent .mat-tab-link.cdk-keyboard-focused:not(.mat-tab-disabled),
-.mat-tab-group.mat-background-accent .mat-tab-link.cdk-program-focused:not(.mat-tab-disabled), .mat-tab-nav-bar.mat-background-accent .mat-tab-label.cdk-keyboard-focused:not(.mat-tab-disabled), .mat-tab-nav-bar.mat-background-accent .mat-tab-label.cdk-program-focused:not(.mat-tab-disabled),
+.mat-mdc-tab-group.mat-background-accent .mat-tab-label.cdk-keyboard-focused:not(.mat-tab-disabled), .mat-tab-group.mat-background-accent .mat-tab-label.cdk-program-focused:not(.mat-tab-disabled),
+.mat-tab-group.mat-background-accent .mat-mdc-tab-link.cdk-keyboard-focused:not(.mat-tab-disabled),
+.mat-tab-group.mat-background-accent .mat-tab-link.cdk-program-focused:not(.mat-tab-disabled), .mat-mdc-tab-nav-bar.mat-background-accent .mat-tab-label.cdk-keyboard-focused:not(.mat-tab-disabled), .mat-tab-nav-bar.mat-background-accent .mat-tab-label.cdk-program-focused:not(.mat-tab-disabled),
 .mat-tab-nav-bar.mat-background-accent .mat-tab-link.cdk-keyboard-focused:not(.mat-tab-disabled),
 .mat-tab-nav-bar.mat-background-accent .mat-tab-link.cdk-program-focused:not(.mat-tab-disabled) {
   background-color: rgba(214, 229, 200, 0.3); }
 
-.mat-tab-group.mat-background-accent > .mat-tab-header, .mat-tab-group.mat-background-accent > .mat-tab-link-container, .mat-tab-group.mat-background-accent > .mat-tab-header-pagination, .mat-tab-nav-bar.mat-background-accent > .mat-tab-header, .mat-tab-nav-bar.mat-background-accent > .mat-tab-link-container, .mat-tab-nav-bar.mat-background-accent > .mat-tab-header-pagination {
+.mat-mdc-tab-group.mat-background-accent > .mat-mdc-tab-header, .mat-tab-group.mat-background-accent > .mat-tab-link-container, .mat-tab-group.mat-background-accent > .mat-tab-header-pagination, .mat-mdc-tab-nav-bar.mat-background-accent > .mat-tab-header, .mat-tab-nav-bar.mat-background-accent > .mat-tab-link-container, .mat-tab-nav-bar.mat-background-accent > .mat-tab-header-pagination {
   background-color: #76a949; }
 
-.mat-tab-group.mat-background-accent > .mat-tab-header .mat-tab-label, .mat-tab-group.mat-background-accent > .mat-tab-link-container .mat-tab-link, .mat-tab-nav-bar.mat-background-accent > .mat-tab-header .mat-tab-label, .mat-tab-nav-bar.mat-background-accent > .mat-tab-link-container .mat-tab-link {
+.mat-mdc-tab-group.mat-background-accent > .mat-mdc-tab-header .mat-tab-label, .mat-tab-group.mat-background-accent > .mat-mdc-tab-link-container .mat-tab-link, .mat-mdc-tab-nav-bar.mat-background-accent > .mat-tab-header .mat-tab-label, .mat-tab-nav-bar.mat-background-accent > .mat-tab-link-container .mat-tab-link {
   color: rgba(0, 0, 0, 0.87); }
-  .mat-tab-group.mat-background-accent > .mat-tab-header .mat-tab-label.mat-tab-disabled, .mat-tab-group.mat-background-accent > .mat-tab-link-container .mat-tab-link.mat-tab-disabled, .mat-tab-nav-bar.mat-background-accent > .mat-tab-header .mat-tab-label.mat-tab-disabled, .mat-tab-nav-bar.mat-background-accent > .mat-tab-link-container .mat-tab-link.mat-tab-disabled {
+  .mat-mdc-tab-group.mat-background-accent > .mat-mdc-tab-header .mat-tab-label.mat-tab-disabled, .mat-tab-group.mat-background-accent > .mat-mdc-tab-link-container .mat-tab-link.mat-tab-disabled, .mat-mdc-tab-nav-bar.mat-background-accent > .mat-tab-header .mat-tab-label.mat-tab-disabled, .mat-tab-nav-bar.mat-background-accent > .mat-tab-link-container .mat-tab-link.mat-tab-disabled {
     color: rgba(0, 0, 0, 0.4); }
 
-.mat-tab-group.mat-background-accent > .mat-tab-header-pagination .mat-tab-header-pagination-chevron,
-.mat-tab-group.mat-background-accent > .mat-tab-links .mat-focus-indicator::before,
-.mat-tab-group.mat-background-accent > .mat-tab-header .mat-focus-indicator::before, .mat-tab-nav-bar.mat-background-accent > .mat-tab-header-pagination .mat-tab-header-pagination-chevron,
+.mat-mdc-tab-group.mat-background-accent > .mat-mdc-tab-header-pagination .mat-tab-header-pagination-chevron,
+.mat-tab-group.mat-background-accent > .mat-mdc-tab-links .mat-focus-indicator::before,
+.mat-tab-group.mat-background-accent > .mat-tab-header .mat-focus-indicator::before, .mat-mdc-tab-nav-bar.mat-background-accent > .mat-tab-header-pagination .mat-tab-header-pagination-chevron,
 .mat-tab-nav-bar.mat-background-accent > .mat-tab-links .mat-focus-indicator::before,
 .mat-tab-nav-bar.mat-background-accent > .mat-tab-header .mat-focus-indicator::before {
   border-color: rgba(0, 0, 0, 0.87); }
 
-.mat-tab-group.mat-background-accent > .mat-tab-header-pagination-disabled .mat-tab-header-pagination-chevron, .mat-tab-nav-bar.mat-background-accent > .mat-tab-header-pagination-disabled .mat-tab-header-pagination-chevron {
+.mat-mdc-tab-group.mat-background-accent > .mat-tab-header-pagination-disabled .mat-tab-header-pagination-chevron, .mat-mdc-tab-nav-bar.mat-background-accent > .mat-tab-header-pagination-disabled .mat-tab-header-pagination-chevron {
   border-color: rgba(0, 0, 0, 0.4); }
 
-.mat-tab-group.mat-background-accent > .mat-tab-header .mat-ripple-element,
-.mat-tab-group.mat-background-accent > .mat-tab-link-container .mat-ripple-element, .mat-tab-nav-bar.mat-background-accent > .mat-tab-header .mat-ripple-element,
+.mat-mdc-tab-group.mat-background-accent > .mat-mdc-tab-header .mat-ripple-element,
+.mat-tab-group.mat-background-accent > .mat-tab-link-container .mat-ripple-element, .mat-mdc-tab-nav-bar.mat-background-accent > .mat-tab-header .mat-ripple-element,
 .mat-tab-nav-bar.mat-background-accent > .mat-tab-link-container .mat-ripple-element {
   background-color: rgba(0, 0, 0, 0.12); }
 
-.mat-tab-group.mat-background-warn .mat-tab-label.cdk-keyboard-focused:not(.mat-tab-disabled), .mat-tab-group.mat-background-warn .mat-tab-label.cdk-program-focused:not(.mat-tab-disabled),
-.mat-tab-group.mat-background-warn .mat-tab-link.cdk-keyboard-focused:not(.mat-tab-disabled),
-.mat-tab-group.mat-background-warn .mat-tab-link.cdk-program-focused:not(.mat-tab-disabled), .mat-tab-nav-bar.mat-background-warn .mat-tab-label.cdk-keyboard-focused:not(.mat-tab-disabled), .mat-tab-nav-bar.mat-background-warn .mat-tab-label.cdk-program-focused:not(.mat-tab-disabled),
+.mat-mdc-tab-group.mat-background-warn .mat-tab-label.cdk-keyboard-focused:not(.mat-tab-disabled), .mat-tab-group.mat-background-warn .mat-tab-label.cdk-program-focused:not(.mat-tab-disabled),
+.mat-tab-group.mat-background-warn .mat-mdc-tab-link.cdk-keyboard-focused:not(.mat-tab-disabled),
+.mat-tab-group.mat-background-warn .mat-tab-link.cdk-program-focused:not(.mat-tab-disabled), .mat-mdc-tab-nav-bar.mat-background-warn .mat-tab-label.cdk-keyboard-focused:not(.mat-tab-disabled), .mat-tab-nav-bar.mat-background-warn .mat-tab-label.cdk-program-focused:not(.mat-tab-disabled),
 .mat-tab-nav-bar.mat-background-warn .mat-tab-link.cdk-keyboard-focused:not(.mat-tab-disabled),
 .mat-tab-nav-bar.mat-background-warn .mat-tab-link.cdk-program-focused:not(.mat-tab-disabled) {
   background-color: rgba(253, 188, 188, 0.3); }
 
-.mat-tab-group.mat-background-warn > .mat-tab-header, .mat-tab-group.mat-background-warn > .mat-tab-link-container, .mat-tab-group.mat-background-warn > .mat-tab-header-pagination, .mat-tab-nav-bar.mat-background-warn > .mat-tab-header, .mat-tab-nav-bar.mat-background-warn > .mat-tab-link-container, .mat-tab-nav-bar.mat-background-warn > .mat-tab-header-pagination {
+.mat-mdc-tab-group.mat-background-warn > .mat-mdc-tab-header, .mat-tab-group.mat-background-warn > .mat-tab-link-container, .mat-tab-group.mat-background-warn > .mat-tab-header-pagination, .mat-mdc-tab-nav-bar.mat-background-warn > .mat-tab-header, .mat-tab-nav-bar.mat-background-warn > .mat-tab-link-container, .mat-tab-nav-bar.mat-background-warn > .mat-tab-header-pagination {
   background-color: #f92121; }
 
-.mat-tab-group.mat-background-warn > .mat-tab-header .mat-tab-label, .mat-tab-group.mat-background-warn > .mat-tab-link-container .mat-tab-link, .mat-tab-nav-bar.mat-background-warn > .mat-tab-header .mat-tab-label, .mat-tab-nav-bar.mat-background-warn > .mat-tab-link-container .mat-tab-link {
+.mat-mdc-tab-group.mat-background-warn > .mat-mdc-tab-header .mat-tab-label, .mat-tab-group.mat-background-warn > .mat-mdc-tab-link-container .mat-tab-link, .mat-mdc-tab-nav-bar.mat-background-warn > .mat-tab-header .mat-tab-label, .mat-tab-nav-bar.mat-background-warn > .mat-tab-link-container .mat-tab-link {
   color: white; }
-  .mat-tab-group.mat-background-warn > .mat-tab-header .mat-tab-label.mat-tab-disabled, .mat-tab-group.mat-background-warn > .mat-tab-link-container .mat-tab-link.mat-tab-disabled, .mat-tab-nav-bar.mat-background-warn > .mat-tab-header .mat-tab-label.mat-tab-disabled, .mat-tab-nav-bar.mat-background-warn > .mat-tab-link-container .mat-tab-link.mat-tab-disabled {
+  .mat-mdc-tab-group.mat-background-warn > .mat-mdc-tab-header .mat-tab-label.mat-tab-disabled, .mat-tab-group.mat-background-warn > .mat-mdc-tab-link-container .mat-tab-link.mat-tab-disabled, .mat-mdc-tab-nav-bar.mat-background-warn > .mat-tab-header .mat-tab-label.mat-tab-disabled, .mat-tab-nav-bar.mat-background-warn > .mat-tab-link-container .mat-tab-link.mat-tab-disabled {
     color: rgba(255, 255, 255, 0.4); }
 
-.mat-tab-group.mat-background-warn > .mat-tab-header-pagination .mat-tab-header-pagination-chevron,
-.mat-tab-group.mat-background-warn > .mat-tab-links .mat-focus-indicator::before,
-.mat-tab-group.mat-background-warn > .mat-tab-header .mat-focus-indicator::before, .mat-tab-nav-bar.mat-background-warn > .mat-tab-header-pagination .mat-tab-header-pagination-chevron,
+.mat-mdc-tab-group.mat-background-warn > .mat-mdc-tab-header-pagination .mat-tab-header-pagination-chevron,
+.mat-tab-group.mat-background-warn > .mat-mdc-tab-links .mat-focus-indicator::before,
+.mat-tab-group.mat-background-warn > .mat-tab-header .mat-focus-indicator::before, .mat-mdc-tab-nav-bar.mat-background-warn > .mat-tab-header-pagination .mat-tab-header-pagination-chevron,
 .mat-tab-nav-bar.mat-background-warn > .mat-tab-links .mat-focus-indicator::before,
 .mat-tab-nav-bar.mat-background-warn > .mat-tab-header .mat-focus-indicator::before {
   border-color: white; }
 
-.mat-tab-group.mat-background-warn > .mat-tab-header-pagination-disabled .mat-tab-header-pagination-chevron, .mat-tab-nav-bar.mat-background-warn > .mat-tab-header-pagination-disabled .mat-tab-header-pagination-chevron {
+.mat-mdc-tab-group.mat-background-warn > .mat-tab-header-pagination-disabled .mat-tab-header-pagination-chevron, .mat-mdc-tab-nav-bar.mat-background-warn > .mat-tab-header-pagination-disabled .mat-tab-header-pagination-chevron {
   border-color: rgba(255, 255, 255, 0.4); }
 
-.mat-tab-group.mat-background-warn > .mat-tab-header .mat-ripple-element,
-.mat-tab-group.mat-background-warn > .mat-tab-link-container .mat-ripple-element, .mat-tab-nav-bar.mat-background-warn > .mat-tab-header .mat-ripple-element,
+.mat-mdc-tab-group.mat-background-warn > .mat-mdc-tab-header .mat-ripple-element,
+.mat-tab-group.mat-background-warn > .mat-tab-link-container .mat-ripple-element, .mat-mdc-tab-nav-bar.mat-background-warn > .mat-tab-header .mat-ripple-element,
 .mat-tab-nav-bar.mat-background-warn > .mat-tab-link-container .mat-ripple-element {
   background-color: rgba(255, 255, 255, 0.12); }
 
@@ -2079,13 +2079,13 @@ th.mat-header-cell, td.mat-cell, td.mat-footer-cell {
 .mat-toolbar .mat-form-field-ripple,
 .mat-toolbar .mat-focused .mat-form-field-ripple {
     background-color: currentColor; }
-  .mat-toolbar .mat-form-field-label,
+  .mat-toolbar .mat-mdc-form-field-label,
 .mat-toolbar .mat-focused .mat-form-field-label,
 .mat-toolbar .mat-select-value,
 .mat-toolbar .mat-select-arrow,
 .mat-toolbar .mat-form-field.mat-focused .mat-select-arrow {
     color: inherit; }
-  .mat-toolbar .mat-input-element {
+  .mat-toolbar .mat-mdc-input-element {
     caret-color: currentColor; }
 
 .mat-toolbar-multiple-rows {
@@ -2100,7 +2100,7 @@ th.mat-header-cell, td.mat-cell, td.mat-footer-cell {
   .mat-toolbar-row, .mat-toolbar-single-row {
     height: 56px; } }
 
-.mat-tooltip {
+.mat-mdc-tooltip {
   background: rgba(95, 95, 95, 0.9); }
 
 .mat-tree {
@@ -2113,21 +2113,21 @@ th.mat-header-cell, td.mat-cell, td.mat-footer-cell {
 .mat-tree-node {
   min-height: 48px; }
 
-.mat-snack-bar-container {
+.mat-mdc-snack-bar-container {
   color: rgba(255, 255, 255, 0.7);
   background: #323232;
   box-shadow: 0px 3px 5px -1px rgba(0, 0, 0, 0.2), 0px 6px 10px 0px rgba(0, 0, 0, 0.14), 0px 1px 18px 0px rgba(0, 0, 0, 0.12); }
 
-.mat-simple-snackbar-action {
+.mat-mdc-snack-bar-action {
   color: #76a949; }
 
-.mat-raised-button, .mat-stroked-button, .mat-flat-button {
+.mat-mdc-raised-button, .mat-mdc-outlined-button, .mat-mdc-unelevated-button {
   padding: 0 1.15em;
   margin: 0 .65em;
   min-width: 3em;
   line-height: 36.4px; }
 
-.mat-standard-chip {
+.mat-mdc-standard-chip {
   padding: .5em .85em;
   min-height: 2.5em; }
 

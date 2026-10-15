@@ -31,10 +31,10 @@ button {
     margin-bottom: 30px;
 }
 
-.mat-list-option:first-child {
+.mat-mdc-list-option:first-child {
     border-top: 1px #DADADA solid;
 }
 
-.mat-list-option {
+.mat-mdc-list-option {
     border-bottom: 1px #DADADA solid;
 }
