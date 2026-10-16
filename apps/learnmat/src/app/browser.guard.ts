@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import { Injectable, inject } from '@angular/core';
 import { ActivatedRouteSnapshot, CanActivate, RouterStateSnapshot, UrlTree, Router } from '@angular/router';
 import { map, Observable } from 'rxjs';
 import { AuthService } from './auth.service';
@@ -7,9 +7,9 @@ import { AuthService } from './auth.service';
   providedIn: 'root'
 })
 export class BrowserGuard implements CanActivate {
-  
+  private router = inject(Router);
+  private auth = inject(AuthService);
 
-  constructor(private router: Router, private auth: AuthService) {}
 
   canActivate(
     route: ActivatedRouteSnapshot,

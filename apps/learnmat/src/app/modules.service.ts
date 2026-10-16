@@ -1,5 +1,5 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { Injectable } from '@angular/core';
+import { Injectable, inject } from '@angular/core';
 import { LearningModule } from './learning-module.model';
 import { environment } from './../environments/environment';
 
@@ -7,8 +7,8 @@ import { environment } from './../environments/environment';
   providedIn: 'root'
 })
 export class ModulesService {
+  private http = inject(HttpClient);
 
-  constructor(private http: HttpClient) { }
 
   public getModules(token: string) {
     const headers = new HttpHeaders()

@@ -1,4 +1,4 @@
-import { Component, ElementRef, OnInit, ViewChild} from '@angular/core';
+import { Component, ElementRef, OnInit, ViewChild, inject } from '@angular/core';
 import {  ActivatedRoute } from '@angular/router';
 import { LearningModule } from '../learning-module.model';
 import { MatSnackBar } from '@angular/material/snack-bar';
@@ -13,6 +13,10 @@ import { MatSelectionList } from '@angular/material/list';
     standalone: false
 })
 export class BrowserComponent implements OnInit {
+  private route = inject(ActivatedRoute);
+  private _snackBar = inject(MatSnackBar);
+  private modulesService = inject(ModulesService);
+
 
   modules: LearningModule[] = [];
   selection: string[] = [];
@@ -21,8 +25,6 @@ export class BrowserComponent implements OnInit {
   modulesList?: MatSelectionList;
 
   private token: string | null = null;
-
-  constructor(private route: ActivatedRoute, private _snackBar: MatSnackBar, private modulesService: ModulesService) { }
 
   ngOnInit() : void {
     

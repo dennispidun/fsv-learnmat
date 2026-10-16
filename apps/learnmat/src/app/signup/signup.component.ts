@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, inject } from '@angular/core';
 import { UntypedFormControl, UntypedFormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { AuthService } from '../auth.service';
@@ -13,14 +13,13 @@ import {MatInputModule} from '@angular/material/input';
     standalone: false
 })
 export class SignupComponent implements OnInit {
+  private router = inject(Router);
+  private auth = inject(AuthService);
+
 
   public signupForm: UntypedFormGroup = new UntypedFormGroup({});
 
   email = "";
-
-  constructor(private router: Router, private auth: AuthService) {
-    
-  }
 
   public hasError = (controlName: string, errorName: string) =>{
     return this.signupForm.controls[controlName].hasError(errorName);

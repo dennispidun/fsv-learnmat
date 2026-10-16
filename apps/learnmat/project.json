@@ -4,6 +4,7 @@
   "projectType": "application",
   "sourceRoot": "apps/learnmat/src",
   "prefix": "app",
+  "tags": [],
   "targets": {
     "build": {
       "executor": "@angular-devkit/build-angular:browser",
@@ -51,7 +52,8 @@
           "buildTarget": "learnmat:build:development"
         }
       },
-      "defaultConfiguration": "development"
+      "defaultConfiguration": "development",
+      "continuous": true
     },
     "extract-i18n": {
       "executor": "@angular-devkit/build-angular:extract-i18n",
@@ -66,9 +68,9 @@
       "executor": "@nx/jest:jest",
       "outputs": ["{workspaceRoot}/coverage/apps/learnmat"],
       "options": {
-        "jestConfig": "apps/learnmat/jest.config.ts"
+        "jestConfig": "apps/learnmat/jest.config.ts",
+        "tsConfig": "apps/learnmat/tsconfig.spec.json"
       }
     }
-  },
-  "tags": []
+  }
 }
