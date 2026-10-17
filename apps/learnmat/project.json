@@ -16,7 +16,7 @@
         "polyfills": "apps/learnmat/src/polyfills.ts",
         "tsConfig": "apps/learnmat/tsconfig.app.json",
         "assets": ["apps/learnmat/src/favicon.ico", "apps/learnmat/src/assets"],
-        "styles": ["apps/learnmat/src/styles.css"],
+        "styles": ["apps/learnmat/src/styles.scss"],
         "scripts": []
       },
       "configurations": {

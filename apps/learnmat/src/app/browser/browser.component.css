@@ -8,6 +8,7 @@
     flex-flow: column;
     align-content: flex-start;
     width: 900px;
+    min-width: 0;
 }
 
 button {
