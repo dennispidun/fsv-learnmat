@@ -5,7 +5,7 @@ class IndexController {
   public index = (req: Request, res: Response, next: NextFunction): void => {
     try {
       res.sendStatus(200);
-      new PwaService().search('schmidn').then(() => {});
+      new PwaService().search('schmidn').then(() => undefined);
     } catch (error) {
       next(error);
     }

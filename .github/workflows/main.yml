@@ -46,6 +46,28 @@ jobs:
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v3
 
+      - name: Cache npm and Nx
+        id: cache
+        uses: actions/cache@v4
+        with:
+          path: |
+            npm-cache
+            nx-cache
+          key: buildkit-${{ hashFiles('package-lock.json') }}-${{ github.sha }}
+          restore-keys: |
+            buildkit-${{ hashFiles('package-lock.json') }}-
+            buildkit-
+
+      - name: Inject caches into Docker build
+        uses: reproducible-containers/buildkit-cache-dance@v3
+        with:
+          cache-map: |
+            {
+              "npm-cache": "/root/.npm",
+              "nx-cache": "/app/.nx/cache"
+            }
+          skip-extraction: ${{ steps.cache.outputs.cache-hit }}
+
       - name: Build and push
         uses: docker/build-push-action@v6
         with:
@@ -54,4 +76,4 @@ jobs:
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
           cache-from: type=registry,ref=ghcr.io/${{ env.REPO_LC }}:buildcache
-          cache-to: type=registry,ref=ghcr.io/${{ env.REPO_LC }}:buildcache,mode=max
+          cache-to: ${{ github.event_name != 'pull_request' && format('type=registry,ref=ghcr.io/{0}:buildcache,mode=max', env.REPO_LC) || '' }}

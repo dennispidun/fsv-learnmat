@@ -1,5 +1,5 @@
 import { HttpClient, HttpResponse } from '@angular/common/http';
-import { Injectable } from '@angular/core';
+import { Injectable, inject } from '@angular/core';
 import { Observable } from 'rxjs';
 
 import { environment } from './../environments/environment';
@@ -8,22 +8,20 @@ import { environment } from './../environments/environment';
   providedIn: 'root'
 })
 export class AuthService {
+  private http = inject(HttpClient);
 
-  constructor(private http: HttpClient) { }
 
   public async signup(email: string): Promise<void> {
     return this.http.post(environment.apiUrl + '/signup', {
       email
     }, {
       observe: 'response'
-    }).toPromise().then(response => {
-      
-    }).catch(error => {
+    }).toPromise().then(() => undefined).catch(error => {
       throw error;
     });
   }
 
-  public validate(token: String): Observable<HttpResponse<Object>> {
+  public validate(token: string): Observable<HttpResponse<object>> {
     return this.http.post(environment.apiUrl + '/validate', {
       token
     }, {

@@ -1,0 +1,9 @@
+node_modules
+dist
+.nx
+.angular
+.git
+.env
+*.pem
+npm-cache
+nx-cache

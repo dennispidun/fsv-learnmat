@@ -1,4 +1,4 @@
-import { Component, ElementRef, OnInit, ViewChild} from '@angular/core';
+import { Component, ElementRef, OnInit, ViewChild, inject } from '@angular/core';
 import {  ActivatedRoute } from '@angular/router';
 import { LearningModule } from '../learning-module.model';
 import { MatSnackBar } from '@angular/material/snack-bar';
@@ -7,21 +7,24 @@ import { ModulesService } from '../modules.service';
 import { MatSelectionList } from '@angular/material/list';
 
 @Component({
-  selector: 'app-browser',
-  templateUrl: './browser.component.html',
-  styleUrls: ['./browser.component.css']
+    selector: 'app-browser',
+    templateUrl: './browser.component.html',
+    styleUrls: ['./browser.component.css'],
+    standalone: false
 })
 export class BrowserComponent implements OnInit {
+  private route = inject(ActivatedRoute);
+  private _snackBar = inject(MatSnackBar);
+  private modulesService = inject(ModulesService);
+
 
   modules: LearningModule[] = [];
-  selection: String[] = [];
+  selection: string[] = [];
 
   @ViewChild('modulesList') 
   modulesList?: MatSelectionList;
 
   private token: string | null = null;
-
-  constructor(private route: ActivatedRoute, private _snackBar: MatSnackBar, private modulesService: ModulesService) { }
 
   ngOnInit() : void {
     
@@ -51,10 +54,8 @@ export class BrowserComponent implements OnInit {
         duration: 3500
       });
 
-      this.modulesService.getLinks(this.token || "", selectedModules).toPromise().then(success => {
-        
-      })
-      
+      this.modulesService.getLinks(this.token || "", selectedModules).toPromise();
+
     }
 
     

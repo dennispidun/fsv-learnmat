@@ -5,7 +5,7 @@ class MailService {
 
     public mail(to: string, subject: string, text: string) {
         try {
-        let transporter = nodemailer.createTransport({
+        const transporter = nodemailer.createTransport({
             host: "smtp.uni-hildesheim.de",
             port: 465,
             secure: true,

@@ -30,9 +30,9 @@ class PwaService {
             .textResponse()
             .buildAndExecute();
             
-        let body: string = data.data;
-        let $ = cheerio.load(body);
-        let person = {
+        const body: string = data.data;
+        const $ = cheerio.load(body);
+        const person = {
         }
         
         for(let i = 2; i <= 14; i++) {

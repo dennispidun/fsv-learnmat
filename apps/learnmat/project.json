@@ -1,0 +1,76 @@
+{
+  "name": "learnmat",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "application",
+  "sourceRoot": "apps/learnmat/src",
+  "prefix": "app",
+  "tags": [],
+  "targets": {
+    "build": {
+      "executor": "@angular-devkit/build-angular:browser",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/apps/learnmat",
+        "index": "apps/learnmat/src/index.html",
+        "main": "apps/learnmat/src/main.ts",
+        "polyfills": "apps/learnmat/src/polyfills.ts",
+        "tsConfig": "apps/learnmat/tsconfig.app.json",
+        "assets": ["apps/learnmat/src/favicon.ico", "apps/learnmat/src/assets"],
+        "styles": ["apps/learnmat/src/styles.scss"],
+        "scripts": []
+      },
+      "configurations": {
+        "production": {
+          "fileReplacements": [
+            {
+              "replace": "apps/learnmat/src/environments/environment.ts",
+              "with": "apps/learnmat/src/environments/environment.prod.ts"
+            }
+          ],
+          "outputHashing": "all",
+          "buildOptimizer": true,
+          "optimization": false
+        },
+        "development": {
+          "buildOptimizer": false,
+          "optimization": false,
+          "vendorChunk": true,
+          "extractLicenses": false,
+          "sourceMap": true,
+          "namedChunks": true
+        }
+      },
+      "defaultConfiguration": "production"
+    },
+    "serve": {
+      "executor": "@angular-devkit/build-angular:dev-server",
+      "configurations": {
+        "production": {
+          "buildTarget": "learnmat:build:production"
+        },
+        "development": {
+          "buildTarget": "learnmat:build:development"
+        }
+      },
+      "defaultConfiguration": "development",
+      "continuous": true
+    },
+    "extract-i18n": {
+      "executor": "@angular-devkit/build-angular:extract-i18n",
+      "options": {
+        "buildTarget": "learnmat:build"
+      }
+    },
+    "lint": {
+      "executor": "@nx/eslint:lint"
+    },
+    "test": {
+      "executor": "@nx/jest:jest",
+      "outputs": ["{workspaceRoot}/coverage/apps/learnmat"],
+      "options": {
+        "jestConfig": "apps/learnmat/jest.config.ts",
+        "tsConfig": "apps/learnmat/tsconfig.spec.json"
+      }
+    }
+  }
+}
